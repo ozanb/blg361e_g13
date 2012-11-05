@@ -1,0 +1,36 @@
+/* 
+    Document   : style
+    Created on : 04.Kas.2012, 18:21:02
+    Author     : Nadir
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+body {
+    background-color: white;
+    color: #6F6F6F;
+    font-family: ’Verdana’, ’Helvetica’, ’Sans-serif’, ’sans’;
+    font-size: 10pt;
+    padding: 10px 10px 10px 10px;
+    margin: 10px 10px 10px 10px;
+}
+
+h1, h2, h3, h4 {
+    color: #E9601A;
+}
+
+h2 {
+    font-size: 1.25em;
+}
+
+a {
+    color: #6F6F6F;
+    text-decoration: underline;
+}
+
+th {
+    background: #C3C3C3;
+    color: white;
+    font-weight: bold;
+    text-align: left;
+}
