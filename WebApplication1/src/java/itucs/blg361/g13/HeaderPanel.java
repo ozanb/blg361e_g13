@@ -45,6 +45,16 @@ public final class HeaderPanel extends Panel {
             }
         };
         this.add(rawEdit);
+        
+        Link empTable = new Link("emptable"){
+            
+            @Override
+            public void onClick(){
+                Raw raw = new Raw();
+                this.setResponsePage(new employee());
+            }
+        };
+        this.add(empTable);
  
     }
 }
