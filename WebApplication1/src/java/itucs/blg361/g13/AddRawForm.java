@@ -13,9 +13,9 @@ import org.apache.wicket.markup.html.form.Form;
 import org.apache.wicket.markup.html.form.TextField;
 import org.apache.wicket.model.CompoundPropertyModel;
 
-public class RawEditForm extends Form{
+public class AddRawForm extends Form{
     
-    public RawEditForm(String id, Raw aRaw){
+    public AddRawForm(String id, Raw aRaw){
         super(id);
         
         CompoundPropertyModel model = new CompoundPropertyModel(aRaw);

@@ -41,7 +41,7 @@ public final class HeaderPanel extends Panel {
             @Override
             public void onClick(){
                 Raw raw = new Raw();
-                this.setResponsePage(new RawEdit(raw));
+                this.setResponsePage(new AddRaw(raw));
             }
         };
         this.add(rawEdit);

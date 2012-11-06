@@ -10,10 +10,10 @@ package itucs.blg361.g13;
  */
 public class Raw {
     
-    private String name=null;
-    private Integer amount=null;
-    private Double unit_cost=null;
-    private Integer daily_want=null;
+    private String name= "";
+    private Integer amount= 0;
+    private Double unit_cost= 0.0;
+    private Integer daily_want= 0;
     
     public Raw(){
         
@@ -21,9 +21,7 @@ public class Raw {
     
     public Raw(String name_in){
         name = name_in;
-        amount = 0;
-        unit_cost = 0.0;
-        daily_want = 0;
+
     }
     
     public Raw(String name_in, Integer amount_in, Double cost_in, Integer want_in){
