@@ -26,8 +26,8 @@ public class Application extends WebApplication {
         this.rawList.addRaw(Milk);
         Raw Package = new Raw("Package",1000,0.5,250);
         this.rawList.addRaw(Package);
-        Employee emp = new Employee("He","lan");
-        this.empList.addEmployee(emp);
+       Employee emp = new Employee("Deneme","deneme");
+       this.empList.addEmployee(emp);
         
 
 
