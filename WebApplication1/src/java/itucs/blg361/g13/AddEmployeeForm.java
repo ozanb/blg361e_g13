@@ -6,36 +6,35 @@ package itucs.blg361.g13;
 
 /**
  *
- * @author Nadir
+ * @author Razi
  */
 
 import org.apache.wicket.markup.html.form.Form;
 import org.apache.wicket.markup.html.form.TextField;
 import org.apache.wicket.model.CompoundPropertyModel;
 
-public class RawEditForm extends Form{
+public class AddEmployeeForm extends Form{
     
-    public RawEditForm(String id, Raw aRaw){
+    public AddEmployeeForm(String id, Employee aEmp){
         super(id);
         
-        CompoundPropertyModel model = new CompoundPropertyModel(aRaw);
+        CompoundPropertyModel model = new CompoundPropertyModel(aEmp);
         this.setModel(model);
         
         this.add(new TextField("name"));
-        this.add(new TextField("amount"));
-        this.add(new TextField("cost"));
-        this.add(new TextField("want"));
-    }
-    
-    @Override
-    public void onSubmit(){
-        Raw raw = (Raw) this.getModelObject();
-        Application app = (Application) this.getApplication();
-        RawList list = app.getRawList();
-        list.addRaw(raw);
-        this.setResponsePage(new RawInfo(raw));
+        this.add(new TextField("surname"));
+        this.add(new TextField("department"));
+        this.add(new TextField("education"));        
         
     }
-    
+    @Override
+    public void onSubmit(){
+        Employee emp = (Employee) this.getModelObject();
+        Application app = (Application) this.getApplication();
+        EmpList list = app.getEmpList();
+        list.addEmployee(emp);
+        this.setResponsePage(new EmpInfo(emp));
+        
+    }
     
 }

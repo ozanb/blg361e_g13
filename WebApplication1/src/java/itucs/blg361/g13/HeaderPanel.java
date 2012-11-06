@@ -51,10 +51,19 @@ public final class HeaderPanel extends Panel {
             @Override
             public void onClick(){
                 Raw raw = new Raw();
-                this.setResponsePage(new employee());
+                this.setResponsePage(new EmployeeTable());
             }
         };
         this.add(empTable);
+        Link addEmp = new Link("addemp"){
+            
+            @Override
+            public void onClick(){
+                Employee emp = new Employee();
+                this.setResponsePage(new AddEmployee(emp));
+            }
+        };
+        this.add(addEmp);
  
     }
 }

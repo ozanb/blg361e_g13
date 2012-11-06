@@ -15,14 +15,20 @@ import org.apache.wicket.protocol.http.WebApplication;
 
 public class Application extends WebApplication {
     
-    private RawList list;
+    private RawList rawList;
+    private EmpList empList;
+    
     public Application() {
-        this.list = new RawList();
+        this.empList = new EmpList();
+        this.rawList = new RawList();
         Raw Milk = new Raw("Milk");
         Milk.setAmount(500);
-        this.list.addRaw(Milk);
+        this.rawList.addRaw(Milk);
         Raw Package = new Raw("Package",1000,0.5,250);
-        this.list.addRaw(Package);
+        this.rawList.addRaw(Package);
+        Employee emp = new Employee("He","lan");
+        this.empList.addEmployee(emp);
+        
 
 
     }
@@ -32,8 +38,12 @@ public class Application extends WebApplication {
         return HomePage.class;
     }
     
-    public RawList getList(){
-        return this.list;
+    public RawList getRawList(){
+        return this.rawList;
+    }
+    
+    public EmpList getEmpList(){
+        return this.empList;
     }
     
 }

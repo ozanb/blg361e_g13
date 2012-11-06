@@ -29,7 +29,7 @@ public class RawTableForm extends Form{
         this.add(rawCheck);
         
         Application app = (Application) this.getApplication();
-        RawList list = app.getList();
+        RawList list = app.getRawList();
         List<Raw> rawlist = list.getList();
         
         PropertyListView listview = new PropertyListView("raw_list",rawlist){
@@ -53,7 +53,7 @@ public class RawTableForm extends Form{
     }
     public void onSubmit(){
         Application app = (Application) this.getApplication();
-        RawList list = app.getList();
+        RawList list = app.getRawList();
         for (Raw raw : this.selectedRaw)
             list.deleteRaw(raw);
         this.setResponsePage(new RawTable());

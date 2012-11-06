@@ -11,15 +11,15 @@ import org.apache.wicket.markup.html.link.Link;
  *
  * @author Razi
  */
-public class employeelink extends Link {
-   public employeelink(String id){
+public class EmployeeTableLink extends Link {
+   public EmployeeTableLink(String id){
     super (id);
 }
 
 @Override
 public void onClick(){
     
-employee target=new employee();
+EmployeeTable target=new EmployeeTable();
 this.setResponsePage(target);
 }
 }
