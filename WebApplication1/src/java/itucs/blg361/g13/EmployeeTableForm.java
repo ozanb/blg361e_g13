@@ -31,20 +31,27 @@ public class EmployeeTableForm extends Form{
         EmpList list = app.getEmpList();
         List<Employee> emplist = list.getList();
         
-        PropertyListView listview = new PropertyListView("emp_list",emplist){
-        
-            @Override
-            protected void populateItem(ListItem item){
-                Employee emp = (Employee) item.getModelObject();
-                item.add(new Check("selected", item.getModel()));
-                item.add(new Label("name",emp.getName()));
-                item.add(new Label("surname",emp.getSurname()));
-                item.add(new Label("depart",emp.getDepartment()));
-                item.add(new Label("edu",emp.getEducation()));
+        PropertyListView listview;
+        listview = new PropertyListView("emp_list",emplist){
                 
 
-            }
-        };
+@Override
+protected void populateItem(ListItem item){
+Employee emp = (Employee) item.getModelObject();
+item.add(new Check("selected", item.getModel()));
+item.add(new Label("name",emp.getName()));
+item.add(new Label("surname",emp.getSurname()));
+item.add(new Label("birthdate",emp.getBirthdate()));
+item.add(new Label("hiredate",emp.getHiredate()));
+item.add(new Label("depart",emp.getDepartment()));
+item.add(new Label("edu",emp.getEducation()));
+item.add(new Label("salary",emp.getSalary().toString()));
+item.add(new Label("phonenumber",emp.getPhonenumber()));
+item.add(new Label("address",emp.getAddress()));
+
+
+}
+};
         empCheck.add(listview);
         
 

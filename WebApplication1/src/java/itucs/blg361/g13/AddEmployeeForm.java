@@ -23,8 +23,14 @@ public class AddEmployeeForm extends Form{
         
         this.add(new TextField("name"));
         this.add(new TextField("surname"));
+        this.add(new TextField("birthdate"));
+        this.add(new TextField("hiredate"));
         this.add(new TextField("department"));
-        this.add(new TextField("education"));        
+        this.add(new TextField("education"));     
+        this.add(new TextField("salary"));
+        this.add(new TextField("phonenumber"));  
+        this.add(new TextField("address"));
+       
         
     }
     @Override

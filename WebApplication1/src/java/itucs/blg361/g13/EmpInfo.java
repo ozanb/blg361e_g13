@@ -15,7 +15,7 @@ public final class EmpInfo extends BasePage {
     public EmpInfo(Employee emp) {
         
          this.add(new Label("name",emp.getName()));
-        
+        this.add(new Label("surname",emp.getSurname()));
     }
     
 

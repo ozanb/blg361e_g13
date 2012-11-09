@@ -14,19 +14,29 @@
         <h2> Employee List</h2>
         <form action="#" wicket:id="emp_list_form">
             <div wicket:id="selected_emp">
-                <table border="5">
+                <table border="10">
                     <tr>
                         <th>Name</th>
                         <th>Surname</th>
+                        <th>Birth Date</th>
+                        <th>Date of Hire</th>
                         <th>Department</th>
                         <th>Education</th>
+                        <th>Salary</th>
+                        <th>Phone Number</th>
+                        <th>Address</th>
                         <th>Delete</th>
                     </tr>
                     <tr wicket:id="emp_list">
                         <td><span wicket:id="name"></span></td>
                         <td><span wicket:id="surname"></span></td>
+                        <td><span wicket:id="birthdate"></span></td>
+                        <td><span wicket:id="hiredate"></span></td>
                         <td><span wicket:id="depart"></span></td>
                         <td><span wicket:id="edu"></span></td>
+                        <td><span wicket:id="salary"></span></td>
+                        <td><span wicket:id="phonenumber"></span></td>
+                        <td><span wicket:id="address"></span></td>
                         <td><input type="checkbox" wicket:id="selected"/></td>
                     </tr>
                 </table>
@@ -34,7 +44,7 @@
             <input type="submit" value="Delete" name="delete"/>
         </form>
         
-            
+            <div style="text-align: left; font-size: 70% " wicket:id="datetime"></div>
 
     </body>
 </html>
