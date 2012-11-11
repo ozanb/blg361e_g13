@@ -25,6 +25,7 @@ public class BasePage extends WebPage{
     public BasePage(IModel model){
         super(model);
         this.add(new HeaderPanel("mainNavigation"));
+        this.add(new FooterPanel("dateNavigation"));
     }
     
 }

@@ -16,11 +16,7 @@ public final class AddEmployee extends BasePage {
 
     public AddEmployee(Employee aEmployee) {
         this.add(new AddEmployeeForm("add_emp",aEmployee));
-        
-        
-        Date now = new Date();
-        Label labeldatetime= new Label("datetime",now.toString());
-        add(labeldatetime);
+
 
     }
     

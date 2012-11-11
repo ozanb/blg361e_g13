@@ -23,9 +23,7 @@ public final class RawTable extends BasePage {
         this.add(form);
 
         
-        Date now = new Date();
-        Label labeldatetime= new Label("datetime",now.toString());
-        add(labeldatetime);
+
     }
     
 }

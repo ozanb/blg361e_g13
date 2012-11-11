@@ -16,9 +16,7 @@ public class HomePage extends BasePage {
 
     public HomePage() {
         
-        Date now = new Date();
-        Label labeldatetime= new Label("datetime",now.toString());
-        this.add(labeldatetime);
+
         
     }
 

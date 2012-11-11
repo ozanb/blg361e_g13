@@ -17,9 +17,7 @@ public final class AddRaw extends BasePage {
     public AddRaw(Raw aRaw) {
         this.add(new AddRawForm("raw_edit",aRaw));
         
-        Date now = new Date();
-        Label labeldatetime= new Label("datetime",now.toString());
-        add(labeldatetime);
+
     }
     
 

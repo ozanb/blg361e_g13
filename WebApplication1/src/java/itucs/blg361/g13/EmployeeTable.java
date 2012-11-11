@@ -15,10 +15,7 @@ public final class EmployeeTable extends BasePage {
 public EmployeeTable(){
     EmployeeTableForm form = new EmployeeTableForm("emp_list_form");
     this.add(form);
-      Date now = new Date();
-        Label labeldatetime= new Label("datetime",now.toString());
-        add(labeldatetime);
-    
+
     
 }
 }
