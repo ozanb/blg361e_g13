@@ -4,10 +4,6 @@
  */
 package itucs.blg361.g13;
 
-import java.util.Date;
-import org.apache.wicket.markup.html.WebPage;
-import org.apache.wicket.markup.html.basic.Label;
-
 /**
  *
  * @author Nadir
