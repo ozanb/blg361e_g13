@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:wicket="http://wicket.apache.org">
+<wicket:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>Add Agent</title>
+        <wicket:link>
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+    </wicket:link>
+    </wicket:head>
+    
+    
+    
+    <body>
+     
+          <div wicket:id="mainNavigation"></div>
+        
+        <form action="#" wicket:id="add_agent">
+            <table>
+                <tr>
+                    <th>Name:</th>
+                    <td><input wicket:id="name" type="text"/></td>
+                </tr>
+                <tr>
+                    <th>Surname:</th>
+                    <td><input wicket:id="surname" type="text"/></td>
+                </tr>
+              
+            </table>
+            <input value="Save" name="Save" type="submit"/>
+        </form>
+        <div wicket:id="dateNavigation"></div>
+   
+        
+        
+    </body>
+</html>

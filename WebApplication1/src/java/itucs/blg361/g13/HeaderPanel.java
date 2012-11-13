@@ -64,6 +64,26 @@ public final class HeaderPanel extends Panel {
             }
         };
         this.add(addEmp);
+        
+                Link agentTable = new Link("agenttable"){
+            
+            @Override
+            public void onClick(){
+                Raw raw = new Raw();
+                this.setResponsePage(new AgentTable());
+            }
+        };
+        this.add(agentTable);
+        
+        Link addAgent = new Link("addagent"){
+            
+            @Override
+            public void onClick(){
+                Agent agent = new Agent();
+                this.setResponsePage(new AddAgent(agent));
+            }
+        };
+        this.add(addAgent);
  
     }
 }

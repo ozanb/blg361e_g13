@@ -17,10 +17,12 @@ public class Application extends WebApplication {
     
     private RawList rawList;
     private EmpList empList;
+    private AgentList agentList;
     
     public Application() {
         this.empList = new EmpList();
         this.rawList = new RawList();
+        this.agentList = new AgentList();
         Raw Milk = new Raw("Milk");
         Milk.setAmount(500);
         this.rawList.addRaw(Milk);
@@ -45,5 +47,15 @@ public class Application extends WebApplication {
     public EmpList getEmpList(){
         return this.empList;
     }
+
+     
+    public AgentList getAgentList(){
+        return this.agentList;
+    }
+
+
+   // AgentList getAgentList() {
+     //   throw new UnsupportedOperationException("Not yet implemented");
+    //}
     
 }
