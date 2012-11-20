@@ -14,7 +14,7 @@ public final class AgentInfo extends BasePage {
 
      public AgentInfo(Agent agent) {
         
-         this.add(new Label("name",agent.getName()));
+         this.add(new Label("company",agent.getCompany()));
         
     }
     

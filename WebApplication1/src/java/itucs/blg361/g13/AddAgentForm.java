@@ -20,6 +20,11 @@ public class AddAgentForm  extends Form{
         this.setModel(model);   
         this.add(new TextField("name"));
         this.add(new TextField("surname"));
+        this.add(new TextField("company"));
+        this.add(new TextField("comaddress"));
+        this.add(new TextField("comtel"));
+        this.add(new TextField("buysell"));
+        
      }
     @Override
     public void onSubmit(){

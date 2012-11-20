@@ -41,7 +41,10 @@ public class AgentTableForm extends Form {
                 item.add(new Check("selected", item.getModel()));
                 item.add(new Label("name",agent.getName()));
                 item.add(new Label("surname",agent.getSurname()));
-                
+                 item.add(new Label("company",agent.getCompany()));
+                item.add(new Label("comaddress",agent.getComaddress()));
+                 item.add(new Label("comtel",agent.getComtel()));
+                item.add(new Label("buysell",agent.getBuysell()));
             }
         };
         agentCheck.add(listview);
