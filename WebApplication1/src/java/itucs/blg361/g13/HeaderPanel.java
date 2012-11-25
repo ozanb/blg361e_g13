@@ -4,13 +4,6 @@
  */
 package itucs.blg361.g13;
 
-import org.apache.wicket.markup.html.panel.Panel;
-
-/**
- *
- * @author Nadir
- */
-
 import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.markup.html.panel.Panel;
 
@@ -26,6 +19,17 @@ public final class HeaderPanel extends Panel {
             }  
         };
         this.add(homeLink);
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         Link rawTableLink = new Link("rawtable"){
 
@@ -35,6 +39,9 @@ public final class HeaderPanel extends Panel {
             }  
         };
         this.add(rawTableLink);
+        
+        
+        
         
         Link rawEdit = new Link("rawedit"){
             
@@ -46,14 +53,20 @@ public final class HeaderPanel extends Panel {
         };
         this.add(rawEdit);
         
+        
+        
+        
         Link empTable = new Link("emptable"){
             
             @Override
             public void onClick(){
-                Raw raw = new Raw();
                 this.setResponsePage(new EmployeeTable());
             }
         };
+        
+        
+        
+        
         this.add(empTable);
         Link addEmp = new Link("addemp"){
             
@@ -65,25 +78,85 @@ public final class HeaderPanel extends Panel {
         };
         this.add(addEmp);
         
+        
+        
+        
                 Link agentTable = new Link("agenttable"){
             
             @Override
             public void onClick(){
-                Raw raw = new Raw();
                 this.setResponsePage(new AgentTable());
             }
         };
         this.add(agentTable);
         
-        Link addAgent = new Link("addagent"){
+        
+        
+        
+        Link addAgent;
+        addAgent = new Link("addagent"){
+       
+       @Override
+       public void onClick(){
+           Agent agent = new Agent();
+           this.setResponsePage(new AddAgent(agent));
+       }
+   };
+        this.add(addAgent);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        Link machineTable = new Link("machinetable"){
             
             @Override
             public void onClick(){
-                Agent agent = new Agent();
-                this.setResponsePage(new AddAgent(agent));
+                this.setResponsePage(new MachineTable());
             }
         };
-        this.add(addAgent);
+        this.add(machineTable);
+        
+        Link addMachine = new Link("addmachine"){
+            
+            @Override
+            public void onClick(){
+                Machine machine = new Machine();
+                this.setResponsePage(new AddMachine(machine));
+            }
+        };
+        this.add(addMachine);
+        
+        
+        
+        
+        
+                Link animalTable = new Link("animaltable"){
+            
+            @Override
+            public void onClick(){
+                this.setResponsePage(new AnimalTable());
+            }
+        };
+        
+        
+        
+        
+        this.add(animalTable);
+        Link addAnimal = new Link("addanimal"){
+            
+            @Override
+            public void onClick(){
+                Animal animal = new Animal();
+                this.setResponsePage(new AddAnimal(animal));
+            }
+        };
+        this.add(addAnimal);
+        
  
     }
 }

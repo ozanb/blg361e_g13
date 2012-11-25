@@ -18,11 +18,20 @@ public class Application extends WebApplication {
     private RawList rawList;
     private EmpList empList;
     private AgentList agentList;
+    private MachineList machineList;
+     private AnimalList animalList;
     
     public Application() {
         this.empList = new EmpList();
         this.rawList = new RawList();
         this.agentList = new AgentList();
+        this.machineList = new MachineList();
+        this.animalList = new AnimalList();
+        
+        
+        
+        
+        
         Raw Milk = new Raw("Milk");
         Milk.setAmount(500);
         this.rawList.addRaw(Milk);
@@ -52,10 +61,15 @@ public class Application extends WebApplication {
     public AgentList getAgentList(){
         return this.agentList;
     }
+ public MachineList getMachineList(){
+        return this.machineList;
+    }
+ 
+ 
+   public AnimalList getAnimalList(){
+        return this.animalList;
+    }
 
-
-   // AgentList getAgentList() {
-     //   throw new UnsupportedOperationException("Not yet implemented");
-    //}
+  
     
 }
