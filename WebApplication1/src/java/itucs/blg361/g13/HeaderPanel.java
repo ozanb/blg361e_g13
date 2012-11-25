@@ -157,6 +157,39 @@ public final class HeaderPanel extends Panel {
         };
         this.add(addAnimal);
         
+        
+        
+        
+          Link transportationTable = new Link("transportationtable"){
+            
+            @Override
+            public void onClick(){
+                this.setResponsePage(new TransportationTable());
+            }
+        };
+        this.add(transportationTable);
+        
+        
+        
+        
+        Link addTransportation;
+        addTransportation = new Link("addtransportation"){
+       
+       @Override
+       public void onClick(){
+           Transportation transportation = new Transportation();
+           this.setResponsePage(new AddTransportation(transportation));
+       }
+   };
+        this.add(addTransportation);
+        
+        
+        
+        
+        
+        
+        
+        
  
     }
 }

@@ -20,6 +20,7 @@ public class Application extends WebApplication {
     private AgentList agentList;
     private MachineList machineList;
      private AnimalList animalList;
+     private TransportationList transportationList;
     
     public Application() {
         this.empList = new EmpList();
@@ -27,7 +28,7 @@ public class Application extends WebApplication {
         this.agentList = new AgentList();
         this.machineList = new MachineList();
         this.animalList = new AnimalList();
-        
+        this.transportationList = new TransportationList();
         
         
         
@@ -68,6 +69,10 @@ public class Application extends WebApplication {
  
    public AnimalList getAnimalList(){
         return this.animalList;
+    }
+   
+     public TransportationList getTransportationList(){
+        return this.transportationList;
     }
 
   

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:wicket="http://wicket.apache.org">
+     <wicket:head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>        
+        <title>The Milk Factory - Transportation Table</title> 
+        <wicket:link>
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+    </wicket:link>
+    </wicket:head> 
+    <body>
+        
+        
+          <div wicket:id="mainNavigation"></div>
+        
+        <h2> Transportation List</h2>
+        <form action="#" wicket:id="transportation_list_form">
+            <div wicket:id="selected_transportation">
+                <table border="5">
+                    <tr>
+                        <th>Company</th>
+                        <th>Country</th>
+                        <th>City</th>
+                        <th>Delete</th>
+                    </tr>
+                    <tr wicket:id="transportation_list">
+                        <td><span wicket:id="company"></span></td>
+                        <td><span wicket:id="country"></span></td>
+                        <td><span wicket:id="city"></span></td>
+                        <td><input type="checkbox" wicket:id="selected"/></td>
+                    </tr>
+                </table>
+            </div>
+            <input type="submit" value="Delete" country="delete"/>
+        </form>
+        <div wicket:id="dateNavigation"></div>
+        
+        
+        
+     
+        
+    </body>
+</html>
