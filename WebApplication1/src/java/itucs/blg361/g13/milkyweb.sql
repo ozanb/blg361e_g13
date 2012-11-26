@@ -47,6 +47,33 @@ INSERT INTO `agent` VALUES (1,'Ahmet','A','Levent','Levent Büyük Çarşı','12
 UNLOCK TABLES;
 
 --
+-- Table structure for table `animal`
+--
+
+DROP TABLE IF EXISTS `animal`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `animal` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `animalKind` varchar(45) COLLATE utf8_turkish_ci NOT NULL,
+  `age` int(11) NOT NULL DEFAULT '1',
+  `place` varchar(45) COLLATE utf8_turkish_ci NOT NULL,
+  `productivityPerDay` int(11) NOT NULL DEFAULT '0',
+  `nOfAnimal` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `animal`
+--
+
+LOCK TABLES `animal` WRITE;
+/*!40000 ALTER TABLE `animal` DISABLE KEYS */;
+/*!40000 ALTER TABLE `animal` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `hrdepartment`
 --
 
@@ -74,6 +101,32 @@ LOCK TABLES `hrdepartment` WRITE;
 /*!40000 ALTER TABLE `hrdepartment` DISABLE KEYS */;
 INSERT INTO `hrdepartment` VALUES (1,'yeni','calisan','yeni@calisan.com','678','Suleymaniye','çalışan','eker sütte 2 senelik tecrübe'),(2,'diğer yeni','calisan','digeryeni@calisan.com','123','hadımköy','çalışan','pınar sütte 3 senelik tecrübe');
 /*!40000 ALTER TABLE `hrdepartment` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `machine`
+--
+
+DROP TABLE IF EXISTS `machine`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `machine` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `kind` varchar(45) COLLATE utf8_turkish_ci NOT NULL,
+  `nOfMach` int(11) NOT NULL,
+  `productPerDay` int(11) NOT NULL,
+  `expense` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `machine`
+--
+
+LOCK TABLES `machine` WRITE;
+/*!40000 ALTER TABLE `machine` DISABLE KEYS */;
+/*!40000 ALTER TABLE `machine` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -124,6 +177,9 @@ CREATE TABLE `person` (
   `userType` int(11) DEFAULT '4',
   `userName` varchar(45) COLLATE utf8_turkish_ci NOT NULL,
   `password` varchar(45) COLLATE utf8_turkish_ci NOT NULL,
+  `birthDate` datetime NOT NULL,
+  `education` varchar(45) COLLATE utf8_turkish_ci NOT NULL,
+  `dateOfGettingJob` datetime NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -134,8 +190,87 @@ CREATE TABLE `person` (
 
 LOCK TABLES `person` WRITE;
 /*!40000 ALTER TABLE `person` DISABLE KEYS */;
-INSERT INTO `person` VALUES (1,'Süleyman','S','3456','suleym@suleym.com','Süleymanın yeri','Müdür','2000',1,'suley','suley'),(2,'Cevdet','C','123667','cevdet@cevdet.com','Cevdetin Evi','Müdür yardımcısı','1500',1,'cevdet','cevdet'),(3,'Cavit','Ca','4567','cavit@cavit.com','Cavitin mahallesi','Bayii',NULL,3,'cavit','cavit'),(4,'Cahit','Cah','123','cahit@cahit.com','Caihitn mekanı','Çalışan','1000',2,'cahit','cahit');
+INSERT INTO `person` VALUES (1,'Süleyman','S','3456','suleym@suleym.com','Süleymanın yeri','Müdür','2000',1,'suley','suley','0000-00-00 00:00:00','','0000-00-00 00:00:00'),(2,'Cevdet','C','123667','cevdet@cevdet.com','Cevdetin Evi','Müdür yardımcısı','1500',1,'cevdet','cevdet','0000-00-00 00:00:00','','0000-00-00 00:00:00'),(3,'Cavit','Ca','4567','cavit@cavit.com','Cavitin mahallesi','Bayii',NULL,3,'cavit','cavit','0000-00-00 00:00:00','','0000-00-00 00:00:00'),(4,'Cahit','Cah','123','cahit@cahit.com','Caihitn mekanı','Çalışan','1000',2,'cahit','cahit','0000-00-00 00:00:00','','0000-00-00 00:00:00');
 /*!40000 ALTER TABLE `person` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `product`
+--
+
+DROP TABLE IF EXISTS `product`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `product` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `productKind` varchar(45) COLLATE utf8_turkish_ci NOT NULL,
+  `nOfProduct` int(11) NOT NULL,
+  `weight` int(11) NOT NULL,
+  `price` int(11) NOT NULL,
+  `productPerDay` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `product`
+--
+
+LOCK TABLES `product` WRITE;
+/*!40000 ALTER TABLE `product` DISABLE KEYS */;
+/*!40000 ALTER TABLE `product` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `stock`
+--
+
+DROP TABLE IF EXISTS `stock`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `stock` (
+  `id` int(11) NOT NULL,
+  `productName` varchar(45) COLLATE utf8_turkish_ci NOT NULL,
+  `nOfStock` int(11) DEFAULT '0',
+  `storePlace` varchar(45) COLLATE utf8_turkish_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `stock`
+--
+
+LOCK TABLES `stock` WRITE;
+/*!40000 ALTER TABLE `stock` DISABLE KEYS */;
+/*!40000 ALTER TABLE `stock` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `transportation`
+--
+
+DROP TABLE IF EXISTS `transportation`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `transportation` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `agentToSend` varchar(45) COLLATE utf8_turkish_ci NOT NULL,
+  `address` varchar(80) COLLATE utf8_turkish_ci NOT NULL,
+  `nOfOrder` int(11) NOT NULL,
+  `expense` varchar(45) COLLATE utf8_turkish_ci NOT NULL,
+  `product` varchar(45) COLLATE utf8_turkish_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `transportation`
+--
+
+LOCK TABLES `transportation` WRITE;
+/*!40000 ALTER TABLE `transportation` DISABLE KEYS */;
+/*!40000 ALTER TABLE `transportation` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -147,4 +282,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2012-11-26 17:46:03
+-- Dump completed on 2012-11-27  0:03:55
