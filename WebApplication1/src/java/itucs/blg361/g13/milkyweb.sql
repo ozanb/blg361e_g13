@@ -26,11 +26,11 @@ DROP TABLE IF EXISTS `agent`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `agent` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(45) COLLATE utf8_turkish_ci NOT NULL,
-  `surname` varchar(45) COLLATE utf8_turkish_ci NOT NULL,
-  `company` varchar(45) COLLATE utf8_turkish_ci NOT NULL,
-  `comAddress` varchar(45) COLLATE utf8_turkish_ci NOT NULL,
-  `comTel` varchar(45) COLLATE utf8_turkish_ci NOT NULL,
+  `name` varchar(45) COLLATE utf8_turkish_ci DEFAULT NULL,
+  `surname` varchar(45) COLLATE utf8_turkish_ci DEFAULT NULL,
+  `company` varchar(45) COLLATE utf8_turkish_ci DEFAULT NULL,
+  `comAddress` varchar(45) COLLATE utf8_turkish_ci DEFAULT NULL,
+  `comTel` varchar(45) COLLATE utf8_turkish_ci DEFAULT NULL,
   `buySell` varchar(45) COLLATE utf8_turkish_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
@@ -77,6 +77,35 @@ INSERT INTO `hrdepartment` VALUES (1,'yeni','calisan','yeni@calisan.com','678','
 UNLOCK TABLES;
 
 --
+-- Table structure for table `message`
+--
+
+DROP TABLE IF EXISTS `message`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `message` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `baslik` varchar(45) COLLATE utf8_turkish_ci NOT NULL,
+  `tarih` datetime DEFAULT NULL,
+  `icerik` varchar(200) COLLATE utf8_turkish_ci NOT NULL,
+  `okundu_mu` tinyint(4) DEFAULT '0',
+  `kimden` int(11) NOT NULL,
+  `kime` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `message`
+--
+
+LOCK TABLES `message` WRITE;
+/*!40000 ALTER TABLE `message` DISABLE KEYS */;
+INSERT INTO `message` VALUES (1,'la gir',NULL,'la girsene olum',0,1,2),(2,'la girsene',NULL,'la bi girin su datalari',0,1,3);
+/*!40000 ALTER TABLE `message` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `person`
 --
 
@@ -118,4 +147,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2012-11-26 14:38:08
+-- Dump completed on 2012-11-26 17:46:03
