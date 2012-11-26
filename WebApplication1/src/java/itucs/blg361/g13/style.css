@@ -11,7 +11,7 @@ body {
     color: #6F6F6F;
     font-family: ’Verdana’, ’Helvetica’, ’Sans-serif’, ’sans’;
     font-size: 10pt;
-    padding: 10px 10px 10px 10px;
+    padding: 15px 15px 10px 10px;
     margin: 10px 10px 10px 10px;
 }
 
@@ -33,4 +33,8 @@ th {
     color: white;
     font-weight: bold;
     text-align: left;
+}
+
+ul {
+    
 }
