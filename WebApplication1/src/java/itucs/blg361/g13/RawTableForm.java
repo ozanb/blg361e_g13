@@ -9,6 +9,7 @@ package itucs.blg361.g13;
  * @author Nadir
  */
 
+import itucs.blg361.pojo.Raw;
 import java.util.LinkedList;
 import java.util.List;
 import org.apache.wicket.markup.html.basic.Label;

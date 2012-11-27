@@ -3,6 +3,7 @@
  * and open the ttransportationlate in the editor.
  */
 package itucs.blg361.g13;
+import itucs.blg361.pojo.Transportation;
 import java.util.LinkedList;
 import java.util.List;
 /**

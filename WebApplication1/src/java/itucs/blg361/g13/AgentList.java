@@ -3,6 +3,7 @@
  * and open the tagentlate in the editor.
  */
 package itucs.blg361.g13;
+import itucs.blg361.pojo.Agent;
 import java.util.LinkedList;
 import java.util.List;
 /**

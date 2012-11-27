@@ -3,6 +3,7 @@
  * and open the template in the editor.
  */
 package itucs.blg361.g13;
+import itucs.blg361.pojo.Transportation;
 import org.apache.wicket.markup.html.link.Link;
 /**
  *

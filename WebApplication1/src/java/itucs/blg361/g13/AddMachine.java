@@ -4,6 +4,8 @@
  */
 package itucs.blg361.g13;
 
+import itucs.blg361.pojo.Machine;
+
 /**
  *
  * @author Razi

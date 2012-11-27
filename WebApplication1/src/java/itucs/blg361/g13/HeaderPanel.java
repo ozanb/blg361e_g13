@@ -4,6 +4,12 @@
  */
 package itucs.blg361.g13;
 
+import itucs.blg361.pojo.Machine;
+import itucs.blg361.pojo.Agent;
+import itucs.blg361.pojo.Employee;
+import itucs.blg361.pojo.Animal;
+import itucs.blg361.pojo.Transportation;
+import itucs.blg361.pojo.Raw;
 import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.markup.html.panel.Panel;
 

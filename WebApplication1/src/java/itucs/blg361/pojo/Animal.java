@@ -1,5 +1,5 @@
 
-package itucs.blg361.g13;
+package itucs.blg361.pojo;
 
 /**
  *
