@@ -14,17 +14,17 @@ public class Message {
     
     private int id;
     private String baslik;
-    private Date tarih;
+    private String tarih;
     private String icerik;
     private Boolean okundu_mu;
-    private int kimden;
-    private int kime;
+    private Person kimden;
+    private Person kime;
 
     public Message(){
     }
     
-    public Message(int id, String baslik, Date tarih, String icerik, 
-            Boolean okundu_mu, int kimden, int kime){
+    public Message(int id, String baslik, String tarih, String icerik, 
+            Boolean okundu_mu, Person kimden, Person kime){
         
         this.id = id;
         this.baslik = baslik;
@@ -67,14 +67,14 @@ public class Message {
     /**
      * @return the tarih
      */
-    public Date getTarih() {
+    public String getTarih() {
         return tarih;
     }
 
     /**
      * @param tarih the tarih to set
      */
-    public void setTarih(Date tarih) {
+    public void setTarih(String tarih) {
         this.tarih = tarih;
     }
 
@@ -109,28 +109,28 @@ public class Message {
     /**
      * @return the kimden
      */
-    public int getKimden() {
+    public Person getKimden() {
         return kimden;
     }
 
     /**
      * @param kimden the kimden to set
      */
-    public void setKimden(int kimden) {
+    public void setKimden(Person kimden) {
         this.kimden = kimden;
     }
 
     /**
      * @return the kime
      */
-    public int getKime() {
+    public Person getKime() {
         return kime;
     }
 
     /**
      * @param kime the kime to set
      */
-    public void setKime(int kime) {
+    public void setKime(Person kime) {
         this.kime = kime;
     }
 }

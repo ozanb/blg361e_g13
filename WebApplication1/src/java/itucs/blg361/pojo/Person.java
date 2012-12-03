@@ -4,6 +4,8 @@
  */
 package itucs.blg361.pojo;
 
+import java.util.Date;
+
 /**
  *
  * @author ozan
@@ -21,6 +23,9 @@ public class Person {
     private int userType;
     private String userName;
     private String password;
+    private Date birthDate;
+    private String education;
+    private Date dateOfGettingJob;
 
     
     public Person(){
@@ -29,7 +34,7 @@ public class Person {
     
     public Person(int id, String name, String surName,String mobilePhone, String email,
             String address, String position, String salary, int userType, String userName,
-            String password){
+            String password, Date birthDate, String education, Date dateOfGettingJob){
         this.id = id;
         this.name = name;
         this.surName = surName;
@@ -41,6 +46,9 @@ public class Person {
         this.userType = userType;
         this.userName = userName;
         this.password = password;
+        this.birthDate = birthDate;
+        this.education = education;
+        this.dateOfGettingJob = dateOfGettingJob;
     }
     
     
@@ -196,6 +204,48 @@ public class Person {
      */
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    /**
+     * @return the birthDate
+     */
+    public Date getBirthDate() {
+        return birthDate;
+    }
+
+    /**
+     * @param birthDate the birthDate to set
+     */
+    public void setBirthDate(Date birthDate) {
+        this.birthDate = birthDate;
+    }
+
+    /**
+     * @return the education
+     */
+    public String getEducation() {
+        return education;
+    }
+
+    /**
+     * @param education the education to set
+     */
+    public void setEducation(String education) {
+        this.education = education;
+    }
+
+    /**
+     * @return the dateOfGettingJob
+     */
+    public Date getDateOfGettingJob() {
+        return dateOfGettingJob;
+    }
+
+    /**
+     * @param dateOfGettingJob the dateOfGettingJob to set
+     */
+    public void setDateOfGettingJob(Date dateOfGettingJob) {
+        this.dateOfGettingJob = dateOfGettingJob;
     }
     
 }
