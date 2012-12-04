@@ -4,12 +4,13 @@
  */
 package itucs.blg361.g13;
 
-import itucs.blg361.pojo.Machine;
 import itucs.blg361.pojo.Agent;
-import itucs.blg361.pojo.Employee;
 import itucs.blg361.pojo.Animal;
-import itucs.blg361.pojo.Transportation;
+import itucs.blg361.pojo.Employee;
+import itucs.blg361.pojo.Machine;
+import itucs.blg361.pojo.Product;
 import itucs.blg361.pojo.Raw;
+import itucs.blg361.pojo.Transportation;
 import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.markup.html.panel.Panel;
 
@@ -49,7 +50,7 @@ public final class HeaderPanel extends Panel {
         
         
         
-        Link rawEdit = new Link("rawedit"){
+        Link rawEdit = new Link("addraw"){
             
             @Override
             public void onClick(){
@@ -189,7 +190,28 @@ public final class HeaderPanel extends Panel {
    };
         this.add(addTransportation);
         
+        Link productTable = new Link("producttable"){
+            
+            @Override
+            public void onClick(){
+                this.setResponsePage(new ProductTable());
+            }
+        };
+        this.add(productTable);
         
+        
+        
+        
+        /*Link addProduct;
+        addProduct = new Link("addproduct"){
+       
+       @Override
+       public void onClick(){
+           Product product = new Product();
+           this.setResponsePage(new AddProduct(product));
+       }
+   };
+        this.add(addProduct);*/
         
         
         

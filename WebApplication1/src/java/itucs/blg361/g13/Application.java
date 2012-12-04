@@ -20,8 +20,9 @@ public class Application extends WebApplication {
     private EmpList empList;
     private AgentList agentList;
     private MachineList machineList;
-     private AnimalList animalList;
-     private TransportationList transportationList;
+    private AnimalList animalList;
+    private TransportationList transportationList;
+    private ProductList prodList;
     
     public Application() {
         this.empList = new EmpList();
@@ -30,15 +31,16 @@ public class Application extends WebApplication {
         this.machineList = new MachineList();
         this.animalList = new AnimalList();
         this.transportationList = new TransportationList();
+        this.prodList = new ProductList();
         
         
         
         
-        Raw Milk = new Raw("Milk");
-        Milk.setAmount(500);
-        this.rawList.addRaw(Milk);
-        Raw Package = new Raw("Package",1000,0.5,250);
-        this.rawList.addRaw(Package);
+        //Raw Milk = new Raw("Milk");
+        //Milk.setAmount(500);
+        //this.rawList.addRaw(Milk);
+        //Raw Package = new Raw("Package",1000,0.5,250);
+        //this.rawList.addRaw(Package);
       //00 Employee emp = new Employee("Deneme","deneme");
        //this.empList.addEmployee(emp);
         
@@ -75,7 +77,8 @@ public class Application extends WebApplication {
      public TransportationList getTransportationList(){
         return this.transportationList;
     }
-
-  
+     public ProductList getProductList(){
+        return this.prodList;
+    }
     
 }

@@ -57,7 +57,6 @@ CREATE TABLE `animal` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `animalKind` varchar(45) COLLATE utf8_turkish_ci NOT NULL,
   `age` int(11) NOT NULL DEFAULT '1',
-  `place` varchar(45) COLLATE utf8_turkish_ci NOT NULL,
   `productivityPerDay` int(11) NOT NULL DEFAULT '0',
   `nOfAnimal` int(11) NOT NULL,
   `expense` int(11) NOT NULL,
