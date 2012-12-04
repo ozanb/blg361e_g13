@@ -22,7 +22,6 @@ public class AddMachineForm  extends Form{
         this.add(new TextField("id"));
         this.add(new TextField("kind"));
         this.add(new TextField("number"));
-        this.add(new TextField("weight"));
         this.add(new TextField("expense"));
         this.add(new TextField("productperday"));
       

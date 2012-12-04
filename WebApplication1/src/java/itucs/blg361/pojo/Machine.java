@@ -13,7 +13,6 @@ public class Machine {
     private Integer id=0;
     private String kind="";
     private Integer number=0;
-    private String weight="";
     private Integer expense=0;
     private Integer productperday=0;
 
@@ -27,7 +26,7 @@ public class Machine {
         id=id_in;  
         kind=kind_in;
         number=number_in;
-        weight=weight_in;
+       
         expense=expense_in;
         productperday=productperday_in;
        
@@ -44,9 +43,7 @@ public class Machine {
            number=number_in;
     }
          
-        public void setWeight(String weight_in){
-       weight=weight_in;
-    } 
+    
         
               public void setExpense(Integer expense_in){
            expense=expense_in;
@@ -73,9 +70,7 @@ public class Machine {
     }
 
         
-         public String getWeight(){
-        return weight;
-    }
+      
          
              public Integer getExpense(){
         return expense;
