@@ -18,15 +18,21 @@
             <div wicket:id="selected_machine">
                 <table border="5">
                     <tr>
+                        <th>Id</th>
                         <th>Kind of The Machine</th>
                         <th>Number</th>
                         <th>Weight</th>   
+                        <th>Expense of The Machine</th>
+                        <th>Product per/day</th>
                      <th>Delete</th>
                     </tr>
                     <tr wicket:id="machine_list">
+                        <td><span wicket:id="id"></span></td>
                         <td><span wicket:id="kind"></span></td>
                         <td><span wicket:id="number"></span></td>
                         <td><span wicket:id="weight"></span></td>
+                        <td><span wicket:id="expense"></span></td>
+                        <td><span wicket:id="productperday"></span></td>
                       
                         <td><input type="checkbox" wicket:id="selected"/></td>
                     </tr>
