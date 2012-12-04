@@ -37,9 +37,12 @@ public class AnimalTableForm extends Form{
 protected void populateItem(ListItem item){
 Animal animal = (Animal) item.getModelObject();
 item.add(new Check("selected", item.getModel()));
+item.add(new Label("id",animal.getId().toString()));
 item.add(new Label("kind",animal.getKind()));
-item.add(new Label("number",animal.getNumber()));
-item.add(new Label("product",animal.getProduct()));
+item.add(new Label("number",animal.getNumber().toString()));
+item.add(new Label("age",animal.getAge().toString()));
+item.add(new Label("expense",animal.getExpense().toString()));
+item.add(new Label("productperday",animal.getProductperday().toString()));
 
 
 
