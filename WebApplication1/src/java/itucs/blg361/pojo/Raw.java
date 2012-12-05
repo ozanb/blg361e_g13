@@ -10,9 +10,10 @@ package itucs.blg361.pojo;
  */
 public class Raw {
     
+    private Integer ID= -1;
     private String name= "";
-    private Integer amount= 0;
-    private Double unit_cost= 0.0;
+    private Double weight= 0.0;
+    private Double price= 0.0;
     private Integer daily_want= 0;
     
     public Raw(){
@@ -24,10 +25,11 @@ public class Raw {
 
     }
     
-    public Raw(String name_in, Integer amount_in, Double cost_in, Integer want_in){
+    public Raw(Integer ID_in, String name_in, Double weight_in, Double price_in, Integer want_in){
+        ID=ID_in;
         name = name_in;
-        amount = amount_in;
-        unit_cost = cost_in;
+        weight = weight_in;
+        price = price_in;
         daily_want = want_in;        
     }
     
@@ -35,20 +37,20 @@ public class Raw {
         name = name_in;
     }
     
-    public void setAmount(Integer amount_in){
-        amount = amount_in;
+    public void setWeight(Double weight_in){
+        weight = weight_in;
     }
     
-    public void editAmount(Integer amount_in){
-        amount = amount + amount_in;
+    public void editWeight(Double weight_in){
+        weight = weight + weight_in;
     }
     
-    public void emptyAmount(){
-        amount = 0;
+    public void emptyWeight(){
+        weight = 0.0;
     }
     
-    public void setCost(Double cost_in){
-        unit_cost = cost_in;
+    public void setPrice(Double price_in){
+        price = price_in;
     }
     
     public void setWant(Integer want_in){
@@ -59,15 +61,19 @@ public class Raw {
         return name;
     }
     
-    public Integer getAmount(){
-        return amount;
+    public Double getWeight(){
+        return weight;
     }
     
-    public Double getCost(){
-        return unit_cost;
+    public Double getPrice(){
+        return price;
     }
     
     public Integer getWant(){
         return daily_want;
+    }
+    
+    public Integer getID(){
+        return ID;
     }
 }

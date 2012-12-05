@@ -40,8 +40,8 @@ public class RawTableForm extends Form{
                 Raw raw = (Raw) item.getModelObject();
                 item.add(new Check("selected", item.getModel()));
                 item.add(new Label("name",raw.getName()));
-                item.add(new Label("amount",raw.getAmount().toString()));
-                item.add(new Label("cost",raw.getCost().toString()));
+                item.add(new Label("weight",raw.getWeight().toString()));
+                item.add(new Label("price",raw.getPrice().toString()));
                 item.add(new Label("want",raw.getWant().toString()));
                 
 
