@@ -2,13 +2,42 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns:wicket="http://wicket.apache.org">
     <wicket:head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <title>MessagePage</title>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>        
+        <title>MilkyWeb Uygulamasi</title> 
         <wicket:link>
         <link rel="stylesheet" type="text/css" href="style.css"/>
     </wicket:link>
-    </wicket:head>
-    <body>
+    </wicket:head> 
+    <body> 
         <div wicket:id="mainNavigation"></div>
+          <child>
+             <link wicket:id="stylesheet" rel="stylesheet" type="text/css" href="#"/> 
+          </child>
+        
+        <script type="text/javascript">
+            function getConfirmation(){
+                return confirm("Emin misiniz?");
+            }
+        </script>
+        
+        <form action="#" wicket:id="form">
+            
+            <a href="#" wicket:id="sendMessage">Mesaj Gönderme Sayfası</a>
+            
+            <br></br>
+            <table border="1">
+                <tr><th>Oku</th><th>Sil</th><th>Okundu mu ?</th><th>Kimden</th><th>Başlık</th><th>Tarih</th></tr>
+          <tr wicket:id="listMessages">
+          <td><a href="#" wicket:id="read">Oku</a></td>
+          <td><a href="#" wicket:id="delete" onclick="return getConfirmation()">Sil</a></td>
+          <td wicket:id="status"></td>
+          <td wicket:id="from"></td>
+          <td wicket:id="subject"></td>
+          <td wicket:id="date"></td>
+          </tr>
+        </table>
+            <div wicket:id="navigator"></div>
+        </form>
+        
     </body>
 </html>

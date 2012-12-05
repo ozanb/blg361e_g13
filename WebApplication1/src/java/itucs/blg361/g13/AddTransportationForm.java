@@ -3,7 +3,7 @@
  * and open the ttransportationlate in the editor.
  */
 package itucs.blg361.g13;
-import itucs.blg361.pojo.Transportation;
+import itucs.blg361.entityBean.Transportation;
 import org.apache.wicket.markup.html.form.Form;
 import org.apache.wicket.markup.html.form.TextField;
 import org.apache.wicket.model.CompoundPropertyModel;

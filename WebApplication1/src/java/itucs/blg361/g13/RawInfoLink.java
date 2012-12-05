@@ -4,7 +4,7 @@
  */
 package itucs.blg361.g13;
 
-import itucs.blg361.pojo.Raw;
+import itucs.blg361.entityBean.Raw;
 import org.apache.wicket.markup.html.link.Link;
 
 /**

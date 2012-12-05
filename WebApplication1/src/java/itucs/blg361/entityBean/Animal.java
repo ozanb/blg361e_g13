@@ -1,5 +1,5 @@
 
-package itucs.blg361.pojo;
+package itucs.blg361.entityBean;
 
 /**
  *

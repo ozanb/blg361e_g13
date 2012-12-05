@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package itucs.blg361.pojo;
+package itucs.blg361.entityBean;
 
 import itucs.blg361.g13.Connect;
 import java.sql.ResultSet;

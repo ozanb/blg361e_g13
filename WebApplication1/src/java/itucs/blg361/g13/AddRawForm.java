@@ -9,7 +9,7 @@ package itucs.blg361.g13;
  * @author Nadir
  */
 
-import itucs.blg361.pojo.Raw;
+import itucs.blg361.entityBean.Raw;
 import org.apache.wicket.markup.html.form.Form;
 import org.apache.wicket.markup.html.form.TextField;
 import org.apache.wicket.model.CompoundPropertyModel;

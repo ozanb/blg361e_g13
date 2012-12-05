@@ -4,7 +4,7 @@
  */
 package itucs.blg361.g13;
 
-import itucs.blg361.pojo.Animal;
+import itucs.blg361.entityBean.Animal;
 
 
 /**

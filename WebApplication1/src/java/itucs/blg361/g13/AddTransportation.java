@@ -1,7 +1,7 @@
 
 package itucs.blg361.g13;
 
-import itucs.blg361.pojo.Transportation;
+import itucs.blg361.entityBean.Transportation;
 
 /**
  *

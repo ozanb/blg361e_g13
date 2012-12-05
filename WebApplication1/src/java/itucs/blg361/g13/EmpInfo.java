@@ -4,7 +4,7 @@
  */
 package itucs.blg361.g13;
 
-import itucs.blg361.pojo.Employee;
+import itucs.blg361.entityBean.Employee;
 import org.apache.wicket.markup.html.basic.Label;
 
 /**

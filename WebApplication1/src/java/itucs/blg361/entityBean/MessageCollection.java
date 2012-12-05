@@ -2,25 +2,20 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package itucs.blg361.pojo;
+package itucs.blg361.entityBean;
 
 import itucs.blg361.g13.BasePage;
 import itucs.blg361.g13.Connect;
-import itucs.blg361.pojo.Person;
-import itucs.blg361.pojo.PersonCollection;
-import itucs.blg361.pojo.Message;
+import itucs.blg361.entityBean.PersonCollection;
+import itucs.blg361.entityBean.Message;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.apache.wicket.markup.html.form.Form;
-import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.markup.html.list.PageableListView;
 
 
@@ -33,8 +28,7 @@ public final class MessageCollection extends BasePage {
    private Form form;
    private PageableListView messageListView;
    private List<Message> messageList;
-   Person sender;
-   
+
    
    public void addMessage(Message message) throws SQLException {
 
