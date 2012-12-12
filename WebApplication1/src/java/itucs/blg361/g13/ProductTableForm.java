@@ -40,7 +40,7 @@ public class ProductTableForm extends Form {
             protected void populateItem(ListItem item){
                 Product product = (Product) item.getModelObject();
                 item.add(new Check("selected", item.getModel()));
-                item.add(new Label("kind",product.getProductKind()));
+                item.add(new Label("kind",product.getKind()));
                 item.add(new Label("weight",product.getWeight().toString()));
                 item.add(new Label("price",product.getPrice().toString()));
                 item.add(new Label("productperday",product.getProductPerDay().toString()));

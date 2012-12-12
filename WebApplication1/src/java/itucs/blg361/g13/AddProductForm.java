@@ -1,15 +1,17 @@
 /*
- * To change this tagentlate, choose Tools | Tagentlates
- * and open the tagentlate in the editor.
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
  */
 package itucs.blg361.g13;
+
 import itucs.blg361.pojo.Product;
 import org.apache.wicket.markup.html.form.Form;
 import org.apache.wicket.markup.html.form.TextField;
 import org.apache.wicket.model.CompoundPropertyModel;
+
 /**
  *
- * @author Razi
+ * @author Nadir
  */
 public class AddProductForm  extends Form{
     
@@ -18,11 +20,12 @@ public class AddProductForm  extends Form{
          
         CompoundPropertyModel model = new CompoundPropertyModel(aProduct);
         
-        this.setModel(model);   
-        this.add(new TextField("pkind"));
+        this.setModel(model);
+        this.add(new TextField("kind"));
         this.add(new TextField("weight"));
         this.add(new TextField("price"));
-        this.add(new TextField("productperday"));
+        this.add(new TextField("productPerDay"));
+      
         
      }
     @Override

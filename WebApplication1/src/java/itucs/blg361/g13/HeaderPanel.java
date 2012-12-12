@@ -202,7 +202,7 @@ public final class HeaderPanel extends Panel {
         
         
         
-        /*Link addProduct;
+        Link addProduct;
         addProduct = new Link("addproduct"){
        
        @Override
@@ -211,7 +211,7 @@ public final class HeaderPanel extends Panel {
            this.setResponsePage(new AddProduct(product));
        }
    };
-        this.add(addProduct);*/
+        this.add(addProduct);
         
         
         

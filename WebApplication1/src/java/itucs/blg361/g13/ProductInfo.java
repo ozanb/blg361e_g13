@@ -15,7 +15,7 @@ public final class ProductInfo extends BasePage {
 
      public ProductInfo(Product product) {
         
-         this.add(new Label("kind",product.getProductKind()));
+         this.add(new Label("kind",product.getKind()));
         
     }
     

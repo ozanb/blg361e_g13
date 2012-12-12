@@ -11,7 +11,7 @@ package itucs.blg361.pojo;
 public class Product {
     
     private Integer id = 0;
-    private String productKind = "";
+    private String kind = "";
     private Double weight = 0.0;
     private Double price = 0.0;
     private Integer productPerDay = 0;
@@ -23,11 +23,11 @@ public class Product {
     
     }
     
-    public Product(Integer id, String productKind, Double weight,
+    public Product(Integer id, String kind, Double weight,
             Double price, Integer productPerDay){
     
         this.id = id;
-        this.productKind = productKind;
+        this.kind = kind;
         this.weight = weight;
         this.price = price;
         this.productPerDay = productPerDay;
@@ -51,15 +51,15 @@ public class Product {
     /**
      * @return the productKind
      */
-    public String getProductKind() {
-        return productKind;
+    public String getKind() {
+        return kind;
     }
 
     /**
      * @param productKind the productKind to set
      */
-    public void setProductKind(String productKind) {
-        this.productKind = productKind;
+    public void setKind(String kind) {
+        this.kind = kind;
     }
 
 

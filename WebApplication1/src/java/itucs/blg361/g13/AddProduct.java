@@ -1,14 +1,15 @@
 /*
- * To change this tagentlate, choose Tools | Tagentlates
- * and open the tagentlate in the editor.
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
  */
 package itucs.blg361.g13;
 
 import itucs.blg361.pojo.Product;
 
+
 /**
  *
- * @author Razi
+ * @author Nadir
  */
 public final class AddProduct extends BasePage {
 
