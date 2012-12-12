@@ -10,10 +10,10 @@ package itucs.blg361.pojo;
  */
 
 public class Machine {
-    private Integer id=0;
+    private Integer id= -1;
     private String kind="";
     private Integer number=0;
-    private Integer expense=0;
+    private Double expense=0.0;
     private Integer productperday=0;
 
    
@@ -22,7 +22,7 @@ public class Machine {
         
 }
     
-      public Machine(Integer id_in,String kind_in,Integer number_in,String weight_in,Integer expense_in,Integer productperday_in){
+      public Machine(Integer id_in,String kind_in,Integer number_in,Double expense_in,Integer productperday_in){
         id=id_in;  
         kind=kind_in;
         number=number_in;
@@ -45,7 +45,7 @@ public class Machine {
          
     
         
-              public void setExpense(Integer expense_in){
+              public void setExpense(Double expense_in){
            expense=expense_in;
     }
               
@@ -72,7 +72,7 @@ public class Machine {
         
       
          
-             public Integer getExpense(){
+             public Double getExpense(){
         return expense;
     }
              
@@ -80,8 +80,8 @@ public class Machine {
         return productperday;
     }
 
+
     
-    
-    
-    
+   
+                 
 }
