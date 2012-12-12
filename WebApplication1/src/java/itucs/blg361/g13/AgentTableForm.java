@@ -45,7 +45,7 @@ public class AgentTableForm extends Form {
                  item.add(new Label("company",agent.getCompany()));
                 item.add(new Label("comaddress",agent.getComaddress()));
                  item.add(new Label("comtel",agent.getComtel()));
-                item.add(new Label("buysell",agent.getBuysell()));
+                item.add(new Label("owe",agent.getOwe().toString()));
             }
         };
         agentCheck.add(listview);
