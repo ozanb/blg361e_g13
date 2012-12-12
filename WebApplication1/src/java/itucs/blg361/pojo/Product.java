@@ -10,7 +10,7 @@ package itucs.blg361.pojo;
  */
 public class Product {
     
-    private Integer id = 0;
+    private Integer id = -1;
     private String kind = "";
     private Double weight = 0.0;
     private Double price = 0.0;
