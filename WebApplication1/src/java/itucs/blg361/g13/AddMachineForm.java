@@ -18,10 +18,11 @@ public class AddMachineForm  extends Form{
          
         CompoundPropertyModel model = new CompoundPropertyModel(aMachine);
         
-        this.setModel(model);   
+        this.setModel(model);
         this.add(new TextField("kind"));
         this.add(new TextField("number"));
-        this.add(new TextField("weight"));
+        this.add(new TextField("expense"));
+        this.add(new TextField("productperday"));
       
         
      }

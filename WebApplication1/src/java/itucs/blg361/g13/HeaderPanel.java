@@ -4,12 +4,13 @@
  */
 package itucs.blg361.g13;
 
-import itucs.blg361.entityBean.Machine;
 import itucs.blg361.entityBean.Agent;
-import itucs.blg361.entityBean.Employee;
 import itucs.blg361.entityBean.Animal;
-import itucs.blg361.entityBean.Transportation;
+import itucs.blg361.entityBean.Employee;
+import itucs.blg361.entityBean.Machine;
+import itucs.blg361.entityBean.Product;
 import itucs.blg361.entityBean.Raw;
+import itucs.blg361.entityBean.Transportation;
 import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.markup.html.panel.Panel;
 
@@ -26,16 +27,7 @@ public final class HeaderPanel extends Panel {
         };
         this.add(homeLink);
 
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+
         
         Link rawTableLink = new Link("rawtable"){
 
@@ -49,7 +41,7 @@ public final class HeaderPanel extends Panel {
         
         
         
-        Link rawEdit = new Link("rawedit"){
+        Link rawEdit = new Link("addraw"){
             
             @Override
             public void onClick(){
@@ -109,13 +101,6 @@ public final class HeaderPanel extends Panel {
        }
    };
         this.add(addAgent);
-        
-        
-        
-        
-        
-        
-        
         
         
         Link machineTable = new Link("machinetable"){
@@ -189,7 +174,28 @@ public final class HeaderPanel extends Panel {
    };
         this.add(addTransportation);
         
+        Link productTable = new Link("producttable"){
+            
+            @Override
+            public void onClick(){
+                this.setResponsePage(new ProductTable());
+            }
+        };
+        this.add(productTable);
         
+        
+        
+        
+        Link addProduct;
+        addProduct = new Link("addproduct"){
+       
+       @Override
+       public void onClick(){
+           Product product = new Product();
+//           this.setResponsePage(new AddProduct(product));
+       }
+   };
+        this.add(addProduct);
         
         
         

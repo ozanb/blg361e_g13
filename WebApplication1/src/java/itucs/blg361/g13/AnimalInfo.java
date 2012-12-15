@@ -13,7 +13,7 @@ public final class AnimalInfo extends BasePage {
     public AnimalInfo(Animal animal) {
         
          this.add(new Label("kind",animal.getKind()));
-        this.add(new Label("number",animal.getNumber()));
+        this.add(new Label("number",animal.getNumber().toString()));
     }
     
 

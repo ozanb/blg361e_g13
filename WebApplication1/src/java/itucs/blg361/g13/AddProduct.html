@@ -3,37 +3,35 @@
 <html xmlns:wicket="http://wicket.apache.org">
     <wicket:head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <title>RawEdit</title>
+        <title>Add Product</title>
         <wicket:link>
         <link rel="stylesheet" type="text/css" href="style.css"/>
-    </wicket:link>
+        </wicket:link>
     </wicket:head>
     <body>
         <div wicket:id="mainNavigation"></div>
-        <h2>Add Raw Page</h2>
         
-        <form action="#" wicket:id="raw_edit">
+        <form action="#" wicket:id="add_product">
             <table>
                 <tr>
                     <th>Kind:</th>
-                    <td><input wicket:id="name" type="text"/></td>
+                    <td><input wicket:id="kind" type="text"/></td>
                 </tr>
                 <tr>
-                    <th>Weight</th>
+                    <th>Weight:</th>
                     <td><input wicket:id="weight" type="text"/></td>
                 </tr>
                 <tr>
                     <th>Price:</th>
                     <td><input wicket:id="price" type="text"/></td>
-                </tr>
+                </tr>                
                 <tr>
-                    <th>Daily Want:</th>
-                    <td><input wicket:id="want" type="text"/></td>
+                    <th>Product Per Day:</th>
+                    <td><input wicket:id="productPerDay" type="text"/></td>
                 </tr>
             </table>
             <input value="Save" name="Save" type="submit"/>
         </form>
-       
         <div wicket:id="dateNavigation"></div>
     </body>
 </html>

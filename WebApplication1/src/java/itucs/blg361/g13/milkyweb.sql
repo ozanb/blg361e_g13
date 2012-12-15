@@ -31,7 +31,7 @@ CREATE TABLE `agent` (
   `company` varchar(45) COLLATE utf8_turkish_ci DEFAULT NULL,
   `comAddress` varchar(45) COLLATE utf8_turkish_ci DEFAULT NULL,
   `comTel` varchar(45) COLLATE utf8_turkish_ci DEFAULT NULL,
-  `buySell` varchar(45) COLLATE utf8_turkish_ci DEFAULT NULL,
+  `owe` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -57,9 +57,9 @@ CREATE TABLE `animal` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `animalKind` varchar(45) COLLATE utf8_turkish_ci NOT NULL,
   `age` int(11) NOT NULL DEFAULT '1',
-  `place` varchar(45) COLLATE utf8_turkish_ci NOT NULL,
   `productivityPerDay` int(11) NOT NULL DEFAULT '0',
   `nOfAnimal` int(11) NOT NULL,
+  `expense` int(11) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -204,7 +204,6 @@ DROP TABLE IF EXISTS `product`;
 CREATE TABLE `product` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `productKind` varchar(45) COLLATE utf8_turkish_ci NOT NULL,
-  `nOfProduct` int(11) NOT NULL,
   `weight` int(11) NOT NULL,
   `price` int(11) NOT NULL,
   `productPerDay` int(11) NOT NULL,
@@ -222,6 +221,32 @@ LOCK TABLES `product` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `raw`
+--
+
+DROP TABLE IF EXISTS `raw`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `product` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `productKind` varchar(45) COLLATE utf8_turkish_ci NOT NULL,
+  `weight` int(11) NOT NULL,
+  `price` int(11) NOT NULL,
+  `dailyWant` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `raw`
+--
+
+LOCK TABLES `raw` WRITE;
+/*!40000 ALTER TABLE `product` DISABLE KEYS */;
+/*!40000 ALTER TABLE `product` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `stock`
 --
 
@@ -230,7 +255,6 @@ DROP TABLE IF EXISTS `stock`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `stock` (
   `id` int(11) NOT NULL,
-  `productName` varchar(45) COLLATE utf8_turkish_ci NOT NULL,
   `nOfStock` int(11) DEFAULT '0',
   `storePlace` varchar(45) COLLATE utf8_turkish_ci NOT NULL,
   PRIMARY KEY (`id`)

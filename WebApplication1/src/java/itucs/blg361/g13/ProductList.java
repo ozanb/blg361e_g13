@@ -3,8 +3,7 @@
  * and open the tagentlate in the editor.
  */
 package itucs.blg361.g13;
-
-import itucs.blg361.entityBean.Machine;
+import itucs.blg361.pojo.Product;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -17,10 +16,10 @@ import java.util.List;
  *
  * @author Razi
  */
-public class MachineList {
+public class ProductList {
     private Connection conn = null;
     
-    public MachineList(){
+    public ProductList(){
         try{
             Class.forName("com.mysql.jdbc.Driver");
         }catch(ClassNotFoundException ex){
@@ -32,21 +31,22 @@ public class MachineList {
         }catch(SQLException ex) {
             throw new UnsupportedOperationException(ex.getMessage());
         }
+        
     }
     
-    public List<Machine> getList(){
-        List<Machine> list = new LinkedList<Machine>();
+    public List<Product> getList(){
+        List<Product> list = new LinkedList<Product>();
         try{
             Statement stmt = this.conn.createStatement();
-            ResultSet rs = stmt.executeQuery("select * from machine");
+            ResultSet rs = stmt.executeQuery("select * from product");
             while(rs.next()){
                 Integer id = rs.getInt("id");
-                String name = rs.getString("kind");
-                Integer number = rs.getInt("nofmach");
-                Integer prod = rs.getInt("productperday");
-                Double expense = rs.getDouble("expense");
-                Machine machine = new Machine(id,name,number,expense,prod);
-                list.add(machine);
+                String name = rs.getString("productKind");
+                Double weight = rs.getDouble("weight");
+                Double price = rs.getDouble("price");
+                Integer want = rs.getInt("productPerDay");
+                Product prod = new Product(id,name,weight,price,want);
+                list.add(prod);
             }
         }catch(SQLException ex) {
             throw new UnsupportedOperationException(ex.getMessage());
@@ -54,14 +54,14 @@ public class MachineList {
         return list;
     }
     
-    public void addMachine(Machine machine){
+    public void addProduct(Product prod){
         try{
-            PreparedStatement stmt = conn.prepareStatement("INSERT INTO MACHINE(KIND, NOFMACH, PRODUCTPERDAY, EXPENSE)"
+            PreparedStatement stmt = conn.prepareStatement("INSERT INTO PRODUCT(PRODUCTKIND, WEIGHT, PRICE, PRODUCTPERDAY)"
                     + "VALUES(?,?,?,?)");
-            stmt.setString(1, machine.getKind());
-            stmt.setInt(2, machine.getNumber());
-            stmt.setInt(3, machine.getProductperday());
-            stmt.setDouble(4, machine.getExpense());
+            stmt.setString(1, prod.getKind());
+            stmt.setDouble(2, prod.getWeight());
+            stmt.setDouble(3, prod.getPrice());
+            stmt.setInt(4, prod.getProductPerDay());
             stmt.executeUpdate();
             
         }catch(SQLException ex) {
@@ -69,10 +69,10 @@ public class MachineList {
         }
     }
     
-    public void deleteMachine(Machine machine){
+    public void deleteProduct(Product prod){
         try{
-            PreparedStatement stmt = conn.prepareStatement("DELETE FROM machine WHERE (ID=?)");
-            stmt.setInt(1, machine.getId());
+            PreparedStatement stmt = conn.prepareStatement("DELETE FROM product WHERE (ID=?)");
+            stmt.setInt(1, prod.getId());
             stmt.executeUpdate();
         }catch (SQLException ex){
             throw new UnsupportedOperationException(ex.getMessage());

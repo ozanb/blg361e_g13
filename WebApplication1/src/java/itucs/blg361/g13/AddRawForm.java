@@ -23,8 +23,8 @@ public class AddRawForm extends Form{
         this.setModel(model);
         
         this.add(new TextField("name"));
-        this.add(new TextField("amount"));
-        this.add(new TextField("cost"));
+        this.add(new TextField("weight"));
+        this.add(new TextField("price"));
         this.add(new TextField("want"));
     }
     

@@ -24,7 +24,7 @@ public class AddAgentForm  extends Form{
         this.add(new TextField("company"));
         this.add(new TextField("comaddress"));
         this.add(new TextField("comtel"));
-        this.add(new TextField("buysell"));
+        this.add(new TextField("owe"));
         
      }
     @Override

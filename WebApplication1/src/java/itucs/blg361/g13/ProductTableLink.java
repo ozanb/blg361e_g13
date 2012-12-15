@@ -10,16 +10,17 @@ import org.apache.wicket.markup.html.link.Link;
  *
  * @author Razi
  */
-public class AgentTableLink extends Link{
+public class ProductTableLink extends Link{
     
     
-      public AgentTableLink(String id){
+      public ProductTableLink(String id){
     super (id);
 }
       @Override
-public void onClick(){
+    public void onClick(){
     
-AgentTable target=new AgentTable();
-this.setResponsePage(target);
-} 
+    ProductTable target=new ProductTable();
+    this.setResponsePage(target);
+      }
+    
 }

@@ -41,8 +41,9 @@ public class MachineTableForm extends Form {
                 Machine machine = (Machine) item.getModelObject();
                 item.add(new Check("selected", item.getModel()));
                 item.add(new Label("kind",machine.getKind()));
-                item.add(new Label("number",machine.getNumber()));
-                 item.add(new Label("weight",machine.getWeight()));
+                item.add(new Label("number",machine.getNumber().toString()));
+                 item.add(new Label("expense",machine.getExpense().toString()));
+                 item.add(new Label("productperday",machine.getProductperday().toString()));
             
             }
         };
