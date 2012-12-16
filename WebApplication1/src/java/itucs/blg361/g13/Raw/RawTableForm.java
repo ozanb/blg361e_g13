@@ -9,7 +9,6 @@ package itucs.blg361.g13.Raw;
  * @author Nadir
  */
 
-import itucs.blg361.g13.Raw.Raw;
 import itucs.blg361.g13.Application;
 import java.util.LinkedList;
 import java.util.List;

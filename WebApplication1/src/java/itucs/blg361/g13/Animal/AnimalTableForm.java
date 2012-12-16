@@ -5,7 +5,6 @@ package itucs.blg361.g13.Animal;
  *
  * @author Razi
  */
-import itucs.blg361.g13.Animal.Animal;
 import itucs.blg361.g13.Application;
 import java.util.LinkedList;
 import java.util.List;

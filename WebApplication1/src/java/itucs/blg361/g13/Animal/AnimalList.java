@@ -6,8 +6,6 @@ package itucs.blg361.g13.Animal;
  * @author Razi
  */
 
-import itucs.blg361.g13.Animal.Animal;
-import itucs.blg361.g13.Animal.Animal;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;

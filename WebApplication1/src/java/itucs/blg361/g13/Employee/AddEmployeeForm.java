@@ -9,7 +9,6 @@ package itucs.blg361.g13.Employee;
  * @author Razi
  */
 
-import itucs.blg361.g13.Employee.Employee;
 import itucs.blg361.g13.Application;
 import org.apache.wicket.markup.html.form.Form;
 import org.apache.wicket.markup.html.form.TextField;

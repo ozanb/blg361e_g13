@@ -4,7 +4,6 @@
  */
 package itucs.blg361.g13.Agent;
 
-import itucs.blg361.g13.Agent.Agent;
 import itucs.blg361.g13.BasePage;
 import org.apache.wicket.markup.html.basic.Label;
 

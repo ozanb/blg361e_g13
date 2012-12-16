@@ -4,7 +4,6 @@
  */
 package itucs.blg361.g13.Agent;
 
-import itucs.blg361.g13.Agent.Agent;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;

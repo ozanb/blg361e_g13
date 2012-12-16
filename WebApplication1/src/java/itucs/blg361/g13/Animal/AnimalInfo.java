@@ -1,7 +1,6 @@
 
 package itucs.blg361.g13.Animal;
 
-import itucs.blg361.g13.Animal.Animal;
 import itucs.blg361.g13.BasePage;
 import org.apache.wicket.markup.html.basic.Label;
 

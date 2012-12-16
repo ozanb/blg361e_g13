@@ -9,7 +9,6 @@ package itucs.blg361.g13.Raw;
  * @author Nadir
  */
 
-import itucs.blg361.g13.Raw.Raw;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;

@@ -9,17 +9,6 @@ package itucs.blg361.g13.Employee;
  * @author Razi
  */
 
-import itucs.blg361.g13.Employee.Employee;
-import java.util.LinkedList;
-import java.util.List;
-
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
-
-import itucs.blg361.g13.Employee.Employee;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;

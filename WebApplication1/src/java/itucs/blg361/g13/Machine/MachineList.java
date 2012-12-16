@@ -4,7 +4,6 @@
  */
 package itucs.blg361.g13.Machine;
 
-import itucs.blg361.g13.Machine.Machine;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;

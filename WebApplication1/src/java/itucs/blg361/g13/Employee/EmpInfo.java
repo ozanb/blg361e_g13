@@ -4,7 +4,6 @@
  */
 package itucs.blg361.g13.Employee;
 
-import itucs.blg361.g13.Employee.Employee;
 import itucs.blg361.g13.BasePage;
 import org.apache.wicket.markup.html.basic.Label;
 

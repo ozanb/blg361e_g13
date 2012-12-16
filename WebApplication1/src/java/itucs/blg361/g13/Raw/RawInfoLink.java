@@ -4,7 +4,6 @@
  */
 package itucs.blg361.g13.Raw;
 
-import itucs.blg361.g13.Raw.Raw;
 import org.apache.wicket.markup.html.link.Link;
 
 /**

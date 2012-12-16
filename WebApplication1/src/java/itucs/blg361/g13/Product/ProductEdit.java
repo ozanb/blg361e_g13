@@ -6,17 +6,14 @@ package itucs.blg361.g13.Product;
 
 import itucs.blg361.g13.BasePage;
 
-
 /**
  *
  * @author Nadir
  */
-public final class AddProduct extends BasePage {
+public final class ProductEdit extends BasePage {
 
-     public AddProduct(Product aProduct) {
-        this.add(new AddProductForm("add_product",aProduct,true));
-
+    public ProductEdit(Product prod) {
+        this.add(new AddProductForm("prod_edit",prod,false));
+        
     }
-    
-   
 }
