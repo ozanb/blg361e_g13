@@ -94,4 +94,25 @@ public class EmpList {
         }
     }
     
+    public void update(Employee emp){
+        try{
+            PreparedStatement stmt = conn.prepareStatement("UPDATE Employee SET NAME=?, SURNAME=?, BIRTHDATE=?, HIREDATE=?, DEPARTMENT=?,"
+                    + "EDUCATION=? ,SALARY=?, PHONENUMBER=?, ADDRESS=? WHERE ID=?");
+            stmt.setString(1, emp.getName());
+            stmt.setString(2, emp.getSurname());
+            stmt.setString(3, emp.getBirthdate());
+            stmt.setString(4, emp.getHiredate());
+            stmt.setString(5, emp.getDepartment());
+            stmt.setString(6, emp.getEducation());
+            stmt.setInt(7, emp.getSalary());
+            stmt.setString(8, emp.getPhonenumber());
+            stmt.setString(9, emp.getAddress());
+            stmt.setInt(10, emp.getId());
+            stmt.executeUpdate();
+            
+        }catch(SQLException ex) {
+            throw new UnsupportedOperationException(ex.getMessage());
+        }
+    }
+    
 }

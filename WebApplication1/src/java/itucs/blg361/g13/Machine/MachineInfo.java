@@ -15,7 +15,11 @@ public final class MachineInfo extends BasePage {
 
      public MachineInfo(Machine machine) {
         
+         this.add(new Label("name",machine.getKind()));
          this.add(new Label("kind",machine.getKind()));
+         this.add(new Label("number",machine.getNumber().toString()));
+         this.add(new Label("expense",machine.getExpense().toString()));
+         this.add(new Label("productperday",machine.getProductperday().toString()));
         
     }
     
