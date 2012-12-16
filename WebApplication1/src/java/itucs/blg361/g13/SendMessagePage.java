@@ -59,7 +59,9 @@ public final class SendMessagePage extends BasePage {
 
          @Override
             public Object getDisplayValue(Object object) {
-                return ((Person) object).getName();
+             
+                //String s=
+                return ((Person) object).getName() + ((Person) object).getSurName();
             }
 
          @Override
