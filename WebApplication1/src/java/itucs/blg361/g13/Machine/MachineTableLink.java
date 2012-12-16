@@ -2,8 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package Machine;
-import itucs.blg361.g13.Machine.MachineTable;
+package itucs.blg361.g13.Machine;
 import org.apache.wicket.markup.html.link.Link;
 
 

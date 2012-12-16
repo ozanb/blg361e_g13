@@ -10,9 +10,24 @@
     </wicket:head>
     <body>
         <div wicket:id="mainNavigation"></div>
-        
-        <h3>Added <span wicket:id="kind"></span></h3>
-        <h3><span wicket:id="number"></span></h3>
+        <h1><span wicket:id="Name"></span> is Added.</h1>
+        <table border="5">
+                    <tr>
+                        <th>Kind Of the Animal</th>
+                        <th>Number</th>
+                        <th>Age</th>
+                        <th>Expense</th>
+                        <th>Product per/day</th>
+                    </tr>
+                    <tr>
+                        <td><span wicket:id="kind"></span></td>
+                        <td><span wicket:id="number"></span></td>
+                        <td><span wicket:id="age"></span></td>
+                        <td><span wicket:id="expense"></span></td>
+                        <td><span wicket:id="productperday"></span></td>                        
+                    </tr>
+                </table>
         <div wicket:id="dateNavigation"></div>
+
     </body>
 </html>

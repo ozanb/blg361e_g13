@@ -9,17 +9,6 @@ package itucs.blg361.g13.Employee;
  * @author Razi
  */
 
-import itucs.blg361.g13.Employee.Employee;
-import java.util.LinkedList;
-import java.util.List;
-
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
-
-import itucs.blg361.g13.Employee.Employee;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -101,6 +90,27 @@ public class EmpList {
             stmt.setInt(1, emp.getId());
             stmt.executeUpdate();
         }catch (SQLException ex){
+            throw new UnsupportedOperationException(ex.getMessage());
+        }
+    }
+    
+    public void update(Employee emp){
+        try{
+            PreparedStatement stmt = conn.prepareStatement("UPDATE Employee SET NAME=?, SURNAME=?, BIRTHDATE=?, HIREDATE=?, DEPARTMENT=?,"
+                    + "EDUCATION=? ,SALARY=?, PHONENUMBER=?, ADDRESS=? WHERE ID=?");
+            stmt.setString(1, emp.getName());
+            stmt.setString(2, emp.getSurname());
+            stmt.setString(3, emp.getBirthdate());
+            stmt.setString(4, emp.getHiredate());
+            stmt.setString(5, emp.getDepartment());
+            stmt.setString(6, emp.getEducation());
+            stmt.setInt(7, emp.getSalary());
+            stmt.setString(8, emp.getPhonenumber());
+            stmt.setString(9, emp.getAddress());
+            stmt.setInt(10, emp.getId());
+            stmt.executeUpdate();
+            
+        }catch(SQLException ex) {
             throw new UnsupportedOperationException(ex.getMessage());
         }
     }

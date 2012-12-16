@@ -4,7 +4,6 @@
  */
 package itucs.blg361.g13.Machine;
 
-import itucs.blg361.g13.Machine.Machine;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -78,5 +77,19 @@ public class MachineList {
             throw new UnsupportedOperationException(ex.getMessage());
         }
     }
-    
+    public void update(Machine machine){
+        try{
+            PreparedStatement stmt = conn.prepareStatement("UPDATE MACHINE SET KIND=?, NOFMACH=?, PRODUCTPERDAY=?, EXPENSE=?"
+                    + "WHERE ID=?");
+            stmt.setString(1, machine.getKind());
+            stmt.setInt(2, machine.getNumber());
+            stmt.setInt(3, machine.getProductperday());
+            stmt.setDouble(4, machine.getExpense());
+            stmt.setInt(5,machine.getId());
+            stmt.executeUpdate();
+            
+        }catch(SQLException ex) {
+            throw new UnsupportedOperationException(ex.getMessage());
+        }
+    }
 }

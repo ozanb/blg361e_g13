@@ -8,7 +8,6 @@ package itucs.blg361.g13.Product;
  *
  * @author Razi
  */
-import itucs.blg361.g13.Product.Product;
 import itucs.blg361.g13.Application;
 import java.util.LinkedList;
 import java.util.List;
@@ -16,6 +15,7 @@ import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.form.Check;
 import org.apache.wicket.markup.html.form.CheckGroup;
 import org.apache.wicket.markup.html.form.Form;
+import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.markup.html.list.ListItem;
 import org.apache.wicket.markup.html.list.PropertyListView;
 
@@ -36,10 +36,19 @@ public class ProductTableForm extends Form {
         List<Product> productlist = list.getList();
         
         PropertyListView listview = new PropertyListView("product_list",productlist){
+            
         
             @Override
             protected void populateItem(ListItem item){
-                Product product = (Product) item.getModelObject();
+                final Product product = (Product) item.getModelObject();
+                item.add(new Link("editlink")
+                {
+                    @Override
+                    public void onClick()
+                    {
+                        setResponsePage(new ProductEdit(product));
+                    }
+                });
                 item.add(new Check("selected", item.getModel()));
                 item.add(new Label("kind",product.getKind()));
                 item.add(new Label("weight",product.getWeight().toString()));

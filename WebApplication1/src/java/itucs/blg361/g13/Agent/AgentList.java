@@ -4,7 +4,6 @@
  */
 package itucs.blg361.g13.Agent;
 
-import itucs.blg361.g13.Agent.Agent;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -80,6 +79,23 @@ public class AgentList {
             stmt.setInt(1, agent.getID());
             stmt.executeUpdate();
         }catch (SQLException ex){
+            throw new UnsupportedOperationException(ex.getMessage());
+        }
+    }
+    public void update(Agent agent){
+        try{
+            PreparedStatement stmt = conn.prepareStatement("UPDATE Agent SET NAME=?, SURNAME=?, COMPANY=?, COMADDRESS=?, "
+                    + "COMTEL=?, OWE=? WHERE ID=?");
+            stmt.setString(1, agent.getName());
+            stmt.setString(2, agent.getSurname());
+            stmt.setString(3, agent.getCompany());
+            stmt.setString(4, agent.getComaddress());
+            stmt.setString(5, agent.getComtel());
+            stmt.setDouble(6, agent.getOwe());
+            stmt.setInt(7, agent.getID());
+            stmt.executeUpdate();
+            
+        }catch(SQLException ex) {
             throw new UnsupportedOperationException(ex.getMessage());
         }
     }

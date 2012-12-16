@@ -3,7 +3,6 @@
  * and open the tagentlate in the editor.
  */
 package itucs.blg361.g13.Product;
-import itucs.blg361.g13.Product.Product;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -78,5 +77,18 @@ public class ProductList {
             throw new UnsupportedOperationException(ex.getMessage());
         }
     }
-    
+    public void update(Product prod) {
+        try{
+            PreparedStatement stmt = conn.prepareStatement("UPDATE product SET PRODUCTKIND=?, WEIGHT=?, PRICE=?, PRODUCTPERDAY=? WHERE ID=?");
+            stmt.setString(1, prod.getKind());
+            stmt.setDouble(2, prod.getWeight());
+            stmt.setDouble(3, prod.getPrice());
+            stmt.setInt(4, prod.getProductPerDay());
+            stmt.setInt(5, prod.getId());
+            stmt.executeUpdate();
+        }catch (SQLException ex){
+            throw new UnsupportedOperationException(ex.getMessage());
+        }
+        
+    }
 }

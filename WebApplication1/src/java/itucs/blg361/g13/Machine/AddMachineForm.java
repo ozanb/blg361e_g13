@@ -3,7 +3,6 @@
  * and open the tagentlate in the editor.
  */
 package itucs.blg361.g13.Machine;
-import itucs.blg361.g13.Machine.Machine;
 import itucs.blg361.g13.Application;
 import org.apache.wicket.markup.html.form.Form;
 import org.apache.wicket.markup.html.form.TextField;
@@ -13,8 +12,8 @@ import org.apache.wicket.model.CompoundPropertyModel;
  * @author Razi
  */
 public class AddMachineForm  extends Form{
-    
-     public AddMachineForm(String id, Machine aMachine){
+     private boolean flag;
+     public AddMachineForm(String id, Machine aMachine, boolean flag){
          super(id);
          
         CompoundPropertyModel model = new CompoundPropertyModel(aMachine);
@@ -24,6 +23,7 @@ public class AddMachineForm  extends Form{
         this.add(new TextField("number"));
         this.add(new TextField("expense"));
         this.add(new TextField("productperday"));
+        this.flag=flag;
       
         
      }
@@ -32,7 +32,11 @@ public class AddMachineForm  extends Form{
         Machine machine = (Machine) this.getModelObject();
         Application app = (Application) this.getApplication();
         MachineList list = app.getMachineList();
-        list.addMachine(machine);
+        if (flag) {
+            list.addMachine(machine);
+        } else {
+            list.update(machine);
+        }
         this.setResponsePage(new MachineInfo(machine));
     
     

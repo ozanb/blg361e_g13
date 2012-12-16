@@ -8,7 +8,6 @@ package itucs.blg361.g13.Machine;
  *
  * @author Razi
  */
-import itucs.blg361.g13.Machine.Machine;
 import itucs.blg361.g13.Application;
 import java.util.LinkedList;
 import java.util.List;
@@ -16,6 +15,7 @@ import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.form.Check;
 import org.apache.wicket.markup.html.form.CheckGroup;
 import org.apache.wicket.markup.html.form.Form;
+import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.markup.html.list.ListItem;
 import org.apache.wicket.markup.html.list.PropertyListView;
 
@@ -39,7 +39,15 @@ public class MachineTableForm extends Form {
         
             @Override
             protected void populateItem(ListItem item){
-                Machine machine = (Machine) item.getModelObject();
+                final Machine machine = (Machine) item.getModelObject();
+                item.add(new Link("editlink")
+                {
+                    @Override
+                    public void onClick()
+                    {
+                        setResponsePage(new MachineEdit(machine));
+                    }
+                });
                 item.add(new Check("selected", item.getModel()));
                 item.add(new Label("kind",machine.getKind()));
                 item.add(new Label("number",machine.getNumber().toString()));
