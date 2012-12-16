@@ -13,7 +13,7 @@ import itucs.blg361.g13.BasePage;
 public final class AddAgent extends BasePage {
 
      public AddAgent(Agent aAgent) {
-        this.add(new AddAgentForm("add_agent",aAgent));
+        this.add(new AddAgentForm("add_agent",aAgent,true));
 
     }
     

@@ -6,18 +6,14 @@ package itucs.blg361.g13.Animal;
 
 import itucs.blg361.g13.BasePage;
 
-
 /**
  *
- * @author Razi
+ * @author Nadir
  */
-public final class AddAnimal extends BasePage {
+public final class AnimalEdit extends BasePage {
 
-    public AddAnimal(Animal aAnimal) {
-        this.add(new AddAnimalForm("add_animal",aAnimal,true));
-
-
+    public AnimalEdit(Animal animal) {
+        this.add(new AddAnimalForm("animal_edit",animal,false));
     }
-    
 
 }

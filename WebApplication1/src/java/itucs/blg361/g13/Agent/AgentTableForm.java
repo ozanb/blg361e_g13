@@ -15,6 +15,7 @@ import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.form.Check;
 import org.apache.wicket.markup.html.form.CheckGroup;
 import org.apache.wicket.markup.html.form.Form;
+import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.markup.html.list.ListItem;
 import org.apache.wicket.markup.html.list.PropertyListView;
 
@@ -38,7 +39,15 @@ public class AgentTableForm extends Form {
         
             @Override
             protected void populateItem(ListItem item){
-                Agent agent = (Agent) item.getModelObject();
+                final Agent agent = (Agent) item.getModelObject();
+                item.add(new Link("editlink")
+                {
+                    @Override
+                    public void onClick()
+                    {
+                        setResponsePage(new AgentEdit(agent));
+                    }
+                });
                 item.add(new Check("selected", item.getModel()));
                 item.add(new Label("name",agent.getName()));
                 item.add(new Label("surname",agent.getSurname()));

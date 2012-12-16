@@ -81,4 +81,21 @@ public class AnimalList {
         }
     }
     
+    public void update(Animal animal){
+        try{
+            PreparedStatement stmt = conn.prepareStatement("UPDATE Animal SET ANIMALKIND=?, AGE=?, PRODUCTIVITYPERDAY=?,"
+                    + "NOFANIMAL=?, EXPENSE=? WHERE ID=?");
+            stmt.setString(1, animal.getKind());
+            stmt.setInt(2, animal.getAge());
+            stmt.setInt(3, animal.getProduct());
+            stmt.setInt(4, animal.getNumber());
+            stmt.setDouble(5, animal.getExpense());
+            stmt.setInt(6, animal.getId());
+            stmt.executeUpdate();
+            
+        }catch(SQLException ex) {
+            throw new UnsupportedOperationException(ex.getMessage());
+        }
+    }
+    
 }

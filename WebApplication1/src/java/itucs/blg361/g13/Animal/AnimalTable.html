@@ -16,24 +16,22 @@
             <div wicket:id="selected_animal">
                 <table border="5">
                     <tr>
-                        <th>Id</th>
                         <th>Kind Of the Animal</th>
                         <th>Number</th>
                         <th>Age</th>
                         <th>Expense</th>
                         <th>Product per/day</th>
                         <th>Delete</th>
+                        <th>Edit</th>
                     </tr>
                     <tr wicket:id="animal_list">
-                        <td><span wicket:id="id"></span></td>
                         <td><span wicket:id="kind"></span></td>
                         <td><span wicket:id="number"></span></td>
                         <td><span wicket:id="age"></span></td>
                         <td><span wicket:id="expense"></span></td>
                         <td><span wicket:id="productperday"></span></td>
-                        
-                
-                        <td><input type="checkbox" wicket:id="selected"/></td>
+                        <td><input type="checkbox" wicket:id="selected"/></td>                        
+                        <td><a href="#" wicket:id="editlink">Edit</a></td>
                     </tr>
                 </table>
             </div>
