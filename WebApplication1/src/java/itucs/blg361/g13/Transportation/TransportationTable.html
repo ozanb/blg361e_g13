@@ -15,27 +15,27 @@
         
         <h2> Transportation List</h2>
         <form action="#" wicket:id="transportation_list_form">
-            
-                <table wicket:id="listing" border="5">
+            <div wicket:id="selected_transportation" >
+                <table border="5">
                     <tr>
-                        <th>Bayii</th>
-                        <th>Adres</th>
-                        <th>Ürün Adı</th>
-                        <th>Ürün Adeti</th>
-                        <th>Maliyet</th>
+                        <th>Agent</th>
+                        <th>Address</th>               
+                        <th>Number of Order</th>
+                        <th>Expense</th>
+                        <th>Product Name</th>
                         <th>Delete</th>
                     </tr>
                     <tr wicket:id="transportation_list">
-                        <td><span wicket:id="agent"></span></td>
+                        <td><span wicket:id="agenttosend"></span></td>
                         <td><span wicket:id="address"></span></td>
-                        <td><span wicket:id="product"></span></td>
-                        <td><span wicket:id="nOfOrder"></span></td>
+                        <td><span wicket:id="noforder"></span></td>
                         <td><span wicket:id="expense"></span></td>
-
+                        <td><span wicket:id="product"></span></td>
+                       
                         <td><input type="checkbox" wicket:id="selected"/></td>
                     </tr>
                 </table>
-            
+            </div>
             <input type="submit" value="Delete" country="delete"/>
         </form>
         <div wicket:id="dateNavigation"></div>

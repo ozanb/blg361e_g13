@@ -19,10 +19,11 @@ public class AddTransportationForm  extends Form{
         CompoundPropertyModel model = new CompoundPropertyModel(aTransportation);
         
         this.setModel(model);   
-          this.add(new TextField("company"));
-        this.add(new TextField("country"));
-        this.add(new TextField("city"));
-      
+          this.add(new TextField("agenttosend"));
+        this.add(new TextField("address"));
+        this.add(new TextField("noforder"));
+        this.add(new TextField("expense"));
+        this.add(new TextField("product"));
 
         
      }

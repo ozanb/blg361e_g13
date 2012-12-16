@@ -19,27 +19,11 @@ public final class TransportationTable extends BasePage {
 
     public TransportationTable() {
         super();
-        
-        TransportationList TC = new TransportationList();
-        List<Transportation> TCList = TC.getList();
-        ListView view = new PropertyListView("transportation_list_form", TCList) {
-
-            @Override
-            protected void populateItem(ListItem item) {
-//                item.add(new Label("agent"));
-                item.add(new Label("address"));
-//                item.add(new Label("product"));
-                item.add(new Label("nOfOrder"));
-                item.add(new Label("expense"));              
-            }
-        };
-        this.add(view);
+     
         
         
-        
-        
-//           TransportationTableForm form = new TransportationTableForm("transportation_list_form");
-//           this.add(form);
+          TransportationTableForm form = new TransportationTableForm("transportation_list_form");
+         this.add(form);
     }
     
    
