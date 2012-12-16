@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:wicket="http://wicket.apache.org">
+
+    <head>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+            <wicket:link>
+                <link rel="stylesheet" type="text/css" href="style.css"/>
+            </wicket:link>
+        <title>HRInsert</title>
+        
+                <div wicket:id="dateNavigation"></div>
+        
+        <div wicket:id="mainNavigation"/>
+        
+    </head>
+
+    <body>
+        
+        <img wicket:id="basvur" src="img/basvur.jpg"/>  
+        
+        <div id="wrapper">
+            <div  style="margin-top:0px; " >
+                
+             
+                
+             <form wicket:id="HRForm">
+            <table align="center">
+                <tr><td>Ad</td><td><input type="text" wicket:id="name"/></td></tr>
+                <tr><td>Soyad</td><td><input type="text" wicket:id="surname" /></td></tr>
+                <tr><td>Adres</td><td><input type="text" wicket:id="address" /></td></tr>
+                <tr><td>E-mail</td><td><input type="text" wicket:id="email" /></td></tr>
+                <tr><td>Cinsiyet</td><td><select wicket:id="gender">
+<!--                            <option>Kadın</option><option>Erkek</option>  -->
+                        </select></td></tr>
+                <tr><td>Cep Telefonu</td><td><input type="text" wicket:id="mobilePhone" /></td></tr>
+                <tr><td>Çalışmak İstenen Pozisyon</td><td><input type="text" wicket:id="position" /></td></tr>
+                <tr><td>TC Kimlik No:</td><td><input type="text" wicket:id="tcnumber" /></td></tr>
+                <tr><td>Doğum Tarihi</td><td><input type="text" wicket:id="birthDate" /></td></tr>
+<!--                <p>
+                        süleyman
+                        <input type="text" wicket:id="dateTextField" size="10"/>
+                        <span wicket:id="dateTextPicker" />
+
+
+                        <input wicket:id="date" type="text" maxlength="10" /><span wicket:id="datePicker" />
+                </p>-->
+<!--                <tr><td>Daha Önceki İş Deneyimleriniz</td><td><input type="textarea" cols="80" rows="6" wicket:id="experience" /></td></tr>-->
+                <tr><td>Daha Önceki İş Deneyimleriniz<textarea wicket:id="experience" cols="50" rows="6"></textarea></td></tr>
+                <tr><td></td><td><input type="submit" value="Kaydet" /></td></tr>
+                
+            </table>
+        </form>
+
+                <span wicket:id="feedback">Suleyman bıradaydı</span>
+            </div>
+        </div>
+    </body>
+</html>

@@ -48,7 +48,8 @@ public final class MessagePage extends BasePage {
 //            int ID=((WSession)getSession()).getKullanici().getId();
             
             int Id = 1;
-            String querry="select name, surName, icerik, baslik, Message.id, Message.kimden from Message, Person "
+            String querry="select name, surName, icerik, baslik, Message.id, "
+                    + "Message.kimden, Message.okundu_mu from Message, Person "
                     + "where (Message.kime ='" + Id + " ' and (kimden = Person.id))";
             ResultSet res = statement.executeQuery(querry);
             while(res.next()){
@@ -57,14 +58,22 @@ public final class MessagePage extends BasePage {
                 
                 int kimdenmMsg =res.getInt("kimden"); 
                 
-                Person p = new Person();
+                Person p = null;
+                p =new Person();
                 p.setName(res.getString("name"));
                 p.setSurName(res.getString("surName"));
                 
+                Boolean okunduMu =false;
+                int okundu =res.getInt("okundu_mu"); 
+                if(okundu !=0)
+                    okunduMu =true;
+                m.setOkundu_mu(okunduMu);
                 m.setIcerik(res.getString("icerik"));
                 m.setBaslik(res.getString("baslik"));
+                
                 PersonCollection pcol =new PersonCollection();
-                p =(Person)pcol.getPersonById(kimdenmMsg);
+                
+              //  p =(Person)pcol.getPersonById(kimdenmMsg);
                 m.setKimden(p);
 
                 messageList.add(m);
@@ -89,7 +98,7 @@ public final class MessagePage extends BasePage {
 
                     final Message message = (Message) item.getModelObject();
 
-                    sender = message.getKimden();
+                    sender = (Person)message.getKimden();
                     item.add(new Link("read") {
                         @Override
                         public void onClick() {
@@ -102,21 +111,18 @@ public final class MessagePage extends BasePage {
                         public void onClick() {
                            try {
                                col = new MessageCollection();
-                               
+                               int x =3;
                                col.deleteMessage(message.getId()); 
                            } catch (Exception e) {
                            }
-                                this.setResponsePage(new MessageCollection());
+                                this.setResponsePage(new MessagePage());
                          }
                     });
                     
-                    String status = null;
+                    String status = "Okunmadı";
                     
                     if(message.getOkundu_mu() !=false) {
                     status = "Okundu";
-                }
-                    else if(!message.getOkundu_mu()) {
-                    status = "Okunmadı";
                 }
                     item.add(new Label("status", status));
                     item.add(new Label("from", sender.getName()));

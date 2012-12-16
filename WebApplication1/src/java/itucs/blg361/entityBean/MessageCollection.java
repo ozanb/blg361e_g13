@@ -82,7 +82,7 @@ public final class MessageCollection extends BasePage {
    
    public void deleteMessage(int messageId) throws SQLException {
 
-        String querry = "DELETE FROM [MESSAGE] WHERE ( ID = ? )";
+        String querry = "DELETE FROM message WHERE ( ID = ? )";
   
         try {
            Connect conn = new Connect();

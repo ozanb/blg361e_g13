@@ -6,6 +6,7 @@
 
 package itucs.blg361.g13;
 
+import itucs.blg361.g13.HumanResource.HRInsert;
 import org.apache.wicket.markup.html.link.Link;
 
 
@@ -24,6 +25,16 @@ public class HomePage extends BasePage {
         };
         
     this.add(mesajOku);
+    
+    
+            Link hr = (Link) new Link("human") {
+            @Override
+            public void onClick() {
+               this.setResponsePage(new HRInsert());
+            }
+        };
+        
+    this.add(hr);
 
         
     }

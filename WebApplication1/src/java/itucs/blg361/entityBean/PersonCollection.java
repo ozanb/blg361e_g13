@@ -26,19 +26,19 @@ public class PersonCollection {
             ResultSet resultSet = statement.executeQuery(querry);
             while (resultSet.next()) {
 
-                String name = resultSet.getString(2);
-                String surName = resultSet.getString(3);
-                String mobilePhone = resultSet.getString(4);
-                String email = resultSet.getString(5);
-                String address = resultSet.getString(6);
-                String position = resultSet.getString(7);
-                String salary = resultSet.getString(8);
-                int userType = resultSet.getInt(9);
-                String userName = resultSet.getString(10);
-                String password = resultSet.getString(11);
-                Date birthDate = resultSet.getDate(12);
-                String education = resultSet.getString(13);
-                Date dateOfGettingJob = resultSet.getDate(14);
+                String name = resultSet.getString("name");
+                String surName = resultSet.getString("surName");
+                String mobilePhone = resultSet.getString("mobilePhone");
+                String email = resultSet.getString("email");
+                String address = resultSet.getString("address");
+                String position = resultSet.getString("position");
+                String salary = resultSet.getString("salary");
+                int userType = resultSet.getInt("userType");
+                String userName = resultSet.getString("userName");
+                String password = resultSet.getString("password");
+                Date birthDate = resultSet.getDate("birthDate");
+                String education = resultSet.getString("education");
+                Date dateOfGettingJob = resultSet.getDate("dateOfGettingJob");
 
 
 //                Integer kTip = resultSet.getInt("kullTip");

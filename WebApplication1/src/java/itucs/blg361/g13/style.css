@@ -35,6 +35,15 @@ th {
     text-align: left;
 }
 
+div#wrapper
+{
+    width:700px;
+    height: 600px;
+    background: #CCFFCC url(img/arka.gif) repeat;
+
+}
+
+
 ul {
     
 }
