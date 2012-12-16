@@ -31,9 +31,9 @@ CREATE TABLE `agent` (
   `company` varchar(45) COLLATE utf8_turkish_ci DEFAULT NULL,
   `comAddress` varchar(45) COLLATE utf8_turkish_ci DEFAULT NULL,
   `comTel` varchar(45) COLLATE utf8_turkish_ci DEFAULT NULL,
-  `owe` int(11) DEFAULT NULL,
+  `owe` double DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci COMMENT='owe muhasebeye gidecek. alacağımızı ifade ediyor. ';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -58,10 +58,10 @@ CREATE TABLE `animal` (
   `animalKind` varchar(45) COLLATE utf8_turkish_ci NOT NULL,
   `age` int(11) NOT NULL DEFAULT '1',
   `productivityPerDay` int(11) NOT NULL DEFAULT '0',
-  `nOfAnimal` int(11) NOT NULL,
-  `expense` int(11) NOT NULL,
+  `nOfAnimal` int(11) NOT NULL DEFAULT '0',
+  `expense` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci COMMENT='stock bu animalin id''sini çekecek. expense ise muhasebeye gidecek.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -71,6 +71,38 @@ CREATE TABLE `animal` (
 LOCK TABLES `animal` WRITE;
 /*!40000 ALTER TABLE `animal` DISABLE KEYS */;
 /*!40000 ALTER TABLE `animal` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `employee`
+--
+
+DROP TABLE IF EXISTS `employee`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `employee` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(12) COLLATE utf8_turkish_ci DEFAULT NULL,
+  `surname` varchar(12) COLLATE utf8_turkish_ci DEFAULT NULL,
+  `birthdate` varchar(17) COLLATE utf8_turkish_ci DEFAULT NULL,
+  `hiredate` varchar(17) COLLATE utf8_turkish_ci DEFAULT NULL,
+  `department` varchar(15) COLLATE utf8_turkish_ci DEFAULT NULL,
+  `education` varchar(15) COLLATE utf8_turkish_ci DEFAULT NULL,
+  `salary` int(11) NOT NULL,
+  `phonenumber` int(11) DEFAULT NULL,
+  `address` varchar(45) COLLATE utf8_turkish_ci DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id_UNIQUE` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `employee`
+--
+
+LOCK TABLES `employee` WRITE;
+/*!40000 ALTER TABLE `employee` DISABLE KEYS */;
+/*!40000 ALTER TABLE `employee` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -115,9 +147,9 @@ CREATE TABLE `machine` (
   `kind` varchar(45) COLLATE utf8_turkish_ci NOT NULL,
   `nOfMach` int(11) NOT NULL,
   `productPerDay` int(11) NOT NULL,
-  `expense` int(11) NOT NULL,
+  `expense` double NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci COMMENT='id=>stock, expense=>muhasebe';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -204,11 +236,11 @@ DROP TABLE IF EXISTS `product`;
 CREATE TABLE `product` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `productKind` varchar(45) COLLATE utf8_turkish_ci NOT NULL,
-  `weight` int(11) NOT NULL,
-  `price` int(11) NOT NULL,
-  `productPerDay` int(11) NOT NULL,
+  `weight` float NOT NULL,
+  `price` float NOT NULL,
+  `productPerDay` float NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci COMMENT='id=>stock ';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -227,14 +259,14 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `raw`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `product` (
+CREATE TABLE `raw` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `productKind` varchar(45) COLLATE utf8_turkish_ci NOT NULL,
-  `weight` int(11) NOT NULL,
-  `price` int(11) NOT NULL,
+  `kind` varchar(45) COLLATE utf8_turkish_ci NOT NULL,
+  `weight` float NOT NULL,
+  `price` float NOT NULL,
   `dailyWant` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -242,8 +274,9 @@ CREATE TABLE `product` (
 --
 
 LOCK TABLES `raw` WRITE;
-/*!40000 ALTER TABLE `product` DISABLE KEYS */;
-/*!40000 ALTER TABLE `product` ENABLE KEYS */;
+/*!40000 ALTER TABLE `raw` DISABLE KEYS */;
+INSERT INTO `raw` VALUES (19,'ndarta',0,0,0);
+/*!40000 ALTER TABLE `raw` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -306,4 +339,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2012-11-27  0:03:55
+-- Dump completed on 2012-12-16 15:54:55
