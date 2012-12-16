@@ -4,20 +4,15 @@
  */
 package itucs.blg361.g13;
 
-import org.apache.wicket.markup.html.WebPage;
-import org.apache.wicket.request.mapper.parameter.PageParameters;
-
 /**
  *
  * @author ozan
  */
-public final class SendMessagePage extends WebPage {
+public final class SendMessagePage extends BasePage {
 
     public SendMessagePage() {
         super();
     }
     
-    public SendMessagePage(PageParameters params) {
-        //TODO:  process page parameters
-    }
+
 }
