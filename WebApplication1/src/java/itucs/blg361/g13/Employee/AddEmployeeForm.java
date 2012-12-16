@@ -15,8 +15,8 @@ import org.apache.wicket.markup.html.form.TextField;
 import org.apache.wicket.model.CompoundPropertyModel;
 
 public class AddEmployeeForm extends Form{
-    
-    public AddEmployeeForm(String id, Employee aEmp){
+    private boolean flag;
+    public AddEmployeeForm(String id, Employee aEmp, boolean flag){
         super(id);
         
         CompoundPropertyModel model = new CompoundPropertyModel(aEmp);
@@ -31,15 +31,18 @@ public class AddEmployeeForm extends Form{
         this.add(new TextField("salary"));
         this.add(new TextField("phonenumber"));  
         this.add(new TextField("address"));
-       
-        
+        this.flag=flag;
     }
     @Override
     public void onSubmit(){
         Employee emp = (Employee) this.getModelObject();
         Application app = (Application) this.getApplication();
         EmpList list = app.getEmpList();
-        list.addEmployee(emp);
+        if (flag) {
+            list.addEmployee(emp);
+        } else {
+            list.update(emp);
+        }
         this.setResponsePage(new EmpInfo(emp));
         
     }

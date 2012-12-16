@@ -37,10 +37,11 @@ public class TransportationTableForm extends Form {
             protected void populateItem(ListItem item){
                 Transportation transportation = (Transportation) item.getModelObject();
                 item.add(new Check("selected", item.getModel()));
-                  item.add(new Label("company",transportation.getCompany()));
-                 item.add(new Label("country",transportation.getCountry()));
-                  item.add(new Label("city",transportation.getCity()));
-
+                  item.add(new Label("agenttosend",transportation.getAgenttosend()));
+                 item.add(new Label("address",transportation.getAddress()));
+                  item.add(new Label("noforder",transportation.getNoforder().toString()));
+                 item.add(new Label("expense",transportation.getExpense().toString()));
+                 item.add(new Label("product",transportation.getProduct()));
             }
         };
         transportationCheck.add(listview);

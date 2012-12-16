@@ -13,7 +13,7 @@ import itucs.blg361.g13.BasePage;
 public final class AddMachine extends BasePage {
 
      public AddMachine(Machine aMachine) {
-        this.add(new AddMachineForm("add_machine",aMachine));
+        this.add(new AddMachineForm("add_machine",aMachine,true));
 
     }
     

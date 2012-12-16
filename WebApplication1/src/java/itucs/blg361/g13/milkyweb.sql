@@ -312,9 +312,9 @@ DROP TABLE IF EXISTS `transportation`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `transportation` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `agentToSend` varchar(45) COLLATE utf8_turkish_ci NOT NULL,
+  `agenttosend` varchar(45) COLLATE utf8_turkish_ci NOT NULL,
   `address` varchar(80) COLLATE utf8_turkish_ci NOT NULL,
-  `nOfOrder` int(11) NOT NULL,
+  `noforder` int(11) NOT NULL,
   `expense` varchar(45) COLLATE utf8_turkish_ci NOT NULL,
   `product` varchar(45) COLLATE utf8_turkish_ci NOT NULL,
   PRIMARY KEY (`id`)
