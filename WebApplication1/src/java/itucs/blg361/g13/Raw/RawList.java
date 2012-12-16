@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package Raw;
+package itucs.blg361.g13.Raw;
 
 /**
  *
@@ -80,6 +80,21 @@ public class RawList {
         }catch (SQLException ex){
             throw new UnsupportedOperationException(ex.getMessage());
         }
+    }
+
+    public void update(Raw raw) {
+        try{
+            PreparedStatement stmt = conn.prepareStatement("UPDATE raw SET KIND=?, WEIGHT=?, PRICE=?, DAILYWANT=? WHERE ID=?");
+            stmt.setString(1, raw.getName());
+            stmt.setDouble(2, raw.getWeight());
+            stmt.setDouble(3, raw.getPrice());
+            stmt.setInt(4, raw.getWant());
+            stmt.setInt(5, raw.getID());
+            stmt.executeUpdate();
+        }catch (SQLException ex){
+            throw new UnsupportedOperationException(ex.getMessage());
+        }
+        
     }
     
     

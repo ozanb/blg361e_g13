@@ -2,8 +2,7 @@
  * To change this ttransportationlate, choose Tools | Ttransportationlates
  * and open the ttransportationlate in the editor.
  */
-package itucs.blg361.g13.Transportion;
-import itucs.blg361.g13.Transportion.Transportation;
+package itucs.blg361.g13.Transportation;
 import java.util.LinkedList;
 import java.util.List;
 /**

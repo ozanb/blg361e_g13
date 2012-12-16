@@ -25,9 +25,9 @@ import org.apache.wicket.markup.html.list.PageableListView;
  */
 public final class MessageCollection extends BasePage {
     
-   private Form form;
-   private PageableListView messageListView;
-   private List<Message> messageList;
+//   private Form form;
+//   private PageableListView messageListView;
+//   private List<Message> messageList;
 
    
    public void addMessage(Message message) throws SQLException {

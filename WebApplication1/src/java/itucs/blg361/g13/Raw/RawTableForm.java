@@ -10,7 +10,6 @@ package itucs.blg361.g13.Raw;
  */
 
 import itucs.blg361.g13.Raw.Raw;
-import Raw.RawList;
 import itucs.blg361.g13.Application;
 import java.util.LinkedList;
 import java.util.List;
@@ -18,6 +17,7 @@ import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.form.Check;
 import org.apache.wicket.markup.html.form.CheckGroup;
 import org.apache.wicket.markup.html.form.Form;
+import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.markup.html.list.ListItem;
 import org.apache.wicket.markup.html.list.PropertyListView;
         
@@ -39,7 +39,16 @@ public class RawTableForm extends Form{
         
             @Override
             protected void populateItem(ListItem item){
-                Raw raw = (Raw) item.getModelObject();
+                final Raw raw = (Raw) item.getModelObject();
+                item.add(new Link("editlink")
+                {
+                    @Override
+                    public void onClick()
+                    {
+                        setResponsePage(new RawEdit(raw));
+                    }
+                });
+                
                 item.add(new Check("selected", item.getModel()));
                 item.add(new Label("name",raw.getName()));
                 item.add(new Label("weight",raw.getWeight().toString()));

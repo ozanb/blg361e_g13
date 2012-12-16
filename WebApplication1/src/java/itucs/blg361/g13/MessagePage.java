@@ -7,6 +7,7 @@ package itucs.blg361.g13;
 import itucs.blg361.entityBean.Message;
 import itucs.blg361.entityBean.MessageCollection;
 import itucs.blg361.entityBean.Person;
+import itucs.blg361.entityBean.PersonCollection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -27,8 +28,6 @@ import org.apache.wicket.markup.html.navigation.paging.PagingNavigator;
  * @author ozan
  */
 public final class MessagePage extends BasePage {
-    
-   private Form form;
    private PageableListView messageListView;
    private List<Message> messageList;
    private MessageCollection col;
@@ -38,12 +37,13 @@ public final class MessagePage extends BasePage {
         super();
         
         messageList = new ArrayList<Message>();
+        sender = new Person();
+        
         try {
             Connect conn = new Connect();
 //            PersonCollection perCol = new PersonCollection();
             
             Statement statement = conn.getConn().createStatement();
-            Message m = new Message();
             
 //            int ID=((WSession)getSession()).getKullanici().getId();
             
@@ -52,13 +52,19 @@ public final class MessagePage extends BasePage {
                     + "where (Message.kime ='" + Id + " ' and (kimden = Person.id))";
             ResultSet res = statement.executeQuery(querry);
             while(res.next()){
+                Message m = new Message();
                 m.setId(res.getInt("id"));
+                
+                int kimdenmMsg =res.getInt("kimden"); 
+                
                 Person p = new Person();
                 p.setName(res.getString("name"));
                 p.setSurName(res.getString("surName"));
                 
                 m.setIcerik(res.getString("icerik"));
                 m.setBaslik(res.getString("baslik"));
+                PersonCollection pcol =new PersonCollection();
+                p =(Person)pcol.getPersonById(kimdenmMsg);
                 m.setKimden(p);
 
                 messageList.add(m);
@@ -68,7 +74,7 @@ public final class MessagePage extends BasePage {
             Logger.getLogger(MessageCollection.class.getName()).log(Level.SEVERE, null, ex);
         }
         
-        form = new Form("form");
+        Form form = new Form("msgForm");
         form.add(new Link("sendMessage") {
 
                 @Override
@@ -95,7 +101,6 @@ public final class MessagePage extends BasePage {
                         @Override
                         public void onClick() {
                            try {
-                               Connect conn = new Connect();
                                col = new MessageCollection();
                                
                                col.deleteMessage(message.getId()); 
@@ -106,7 +111,8 @@ public final class MessagePage extends BasePage {
                     });
                     
                     String status = null;
-                    if(message.getOkundu_mu()) {
+                    
+                    if(message.getOkundu_mu() !=false) {
                     status = "Okundu";
                 }
                     else if(!message.getOkundu_mu()) {

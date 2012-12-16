@@ -1,11 +1,10 @@
 
-package itucs.blg361.g13.Transportion;
+package itucs.blg361.g13.Transportation;
 
 /**
  *
  * @author Razi
  */
-import itucs.blg361.g13.Transportion.Transportation;
 import itucs.blg361.g13.Application;
 import java.util.LinkedList;
 import java.util.List;
@@ -39,7 +38,7 @@ public class TransportationTableForm extends Form {
                 Transportation transportation = (Transportation) item.getModelObject();
                 item.add(new Check("selected", item.getModel()));
                   item.add(new Label("company",transportation.getCompany()));
-                  item.add(new Label("country",transportation.getCountry()));
+                 item.add(new Label("country",transportation.getCountry()));
                   item.add(new Label("city",transportation.getCity()));
 
             }

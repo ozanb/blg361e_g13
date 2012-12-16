@@ -4,19 +4,17 @@
  */
 package itucs.blg361.g13.Raw;
 
-import itucs.blg361.g13.Raw.Raw;
 import itucs.blg361.g13.BasePage;
 
 /**
  *
  * @author Nadir
  */
-public final class AddRaw extends BasePage {
+public final class RawEdit extends BasePage {
 
-    public AddRaw(Raw aRaw) {
-        this.add(new AddRawForm("add_raw",aRaw,true));
+    public RawEdit(Raw aRaw) {
+        this.add(new AddRawForm("raw_edit",aRaw,false));
         
-
     }
     
 

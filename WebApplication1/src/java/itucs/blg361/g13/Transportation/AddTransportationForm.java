@@ -2,8 +2,7 @@
  * To change this ttransportationlate, choose Tools | Ttransportationlates
  * and open the ttransportationlate in the editor.
  */
-package itucs.blg361.g13.Transportion;
-import itucs.blg361.g13.Transportion.Transportation;
+package itucs.blg361.g13.Transportation;
 import itucs.blg361.g13.Application;
 import org.apache.wicket.markup.html.form.Form;
 import org.apache.wicket.markup.html.form.TextField;

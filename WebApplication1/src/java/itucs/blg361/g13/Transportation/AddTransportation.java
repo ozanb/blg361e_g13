@@ -1,7 +1,6 @@
 
-package itucs.blg361.g13.Transportion;
+package itucs.blg361.g13.Transportation;
 
-import itucs.blg361.g13.Transportion.Transportation;
 import itucs.blg361.g13.BasePage;
 
 /**

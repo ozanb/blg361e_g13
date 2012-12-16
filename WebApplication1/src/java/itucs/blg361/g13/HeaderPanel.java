@@ -4,8 +4,8 @@
  */
 package itucs.blg361.g13;
 
-import itucs.blg361.g13.Transportion.TransportationTable;
-import itucs.blg361.g13.Transportion.AddTransportation;
+import itucs.blg361.g13.Transportation.TransportationTable;
+import itucs.blg361.g13.Transportation.AddTransportation;
 import itucs.blg361.g13.Raw.RawTable;
 import itucs.blg361.g13.Raw.AddRaw;
 import itucs.blg361.g13.Product.ProductTable;
@@ -24,7 +24,7 @@ import itucs.blg361.g13.Employee.Employee;
 import itucs.blg361.g13.Machine.Machine;
 import itucs.blg361.g13.Product.Product;
 import itucs.blg361.g13.Raw.Raw;
-import itucs.blg361.g13.Transportion.Transportation;
+import itucs.blg361.g13.Transportation.Transportation;
 import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.markup.html.panel.Panel;
 
