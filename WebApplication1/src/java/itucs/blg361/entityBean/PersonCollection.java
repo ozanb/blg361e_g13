@@ -7,7 +7,9 @@ package itucs.blg361.entityBean;
 import itucs.blg361.g13.Connect;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 
 
@@ -16,6 +18,47 @@ import java.util.Date;
  * @author ozan
  */
 public class PersonCollection {
+    
+        public List<Person> getAllPerson() {
+        List<Person> result = new ArrayList<Person>();
+        try {
+            Connect conn = new Connect();
+            Statement statement = conn.getConn().createStatement();
+            ResultSet resultSet = statement.executeQuery("select * from person");
+            while (resultSet.next()) {
+                Person k = new Person();
+                k.setId(resultSet.getInt("id"));
+                k.setName(resultSet.getString("name"));
+                k.setSurName(resultSet.getString("surName"));
+                k.setMobilePhone(resultSet.getString("mobilePhone"));
+                k.setEmail(resultSet.getString("email"));
+                k.setAddress(resultSet.getString("address"));
+                k.setPosition(resultSet.getString("position"));
+                k.setSalary(resultSet.getString("salary"));
+                k.setUserName(resultSet.getString("userName"));
+                k.setPassword(resultSet.getString("password"));
+                //k.setBirthDate(resultSet.getDate("birthDate"));
+                k.setEducation(resultSet.getString("education"));
+                
+                //java.util.Date jDate = new java.util.Date(resultSet.getDate("dateOfGettingJob").getTime());
+                
+                //k.setDateOfGettingJob(resultSet.getDate("dateOfGettingJob"));
+                
+                //k.setDateOfGettingJob(jDate);
+                
+                k.setUserType(resultSet.getInt("userType"));
+                
+                result.add(k);
+            }
+            statement.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return result;
+    }
+    
+    
+    
     
         public Person getPersonById(int Id) {
         Person per = null;

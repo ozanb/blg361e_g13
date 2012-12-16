@@ -28,4 +28,6 @@ public class BasePage extends WebPage{
         this.add(new FooterPanel("dateNavigation"));
     }
     
+
+    
 }

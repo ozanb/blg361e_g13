@@ -11,6 +11,44 @@
     <body>
         <div wicket:id="mainNavigation"></div>
         <div wicket:id="dateNavigation"></div>
+        
+          <form action="#" wicket:id="form">
+            <fieldset>
+                <legend>Mesaj Gönderme</legend>
+                <table>
+
+                    <tr>
+                        <td>Kime</td>
+                        <td>
+                            <select wicket:id = "user">
+                                <option>User</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Başlık</td>
+                        <td>
+                            <input type="text" wicket:id="subject" size="50"></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Mesaj</td>
+                        <td>
+                            <textarea cols="100" rows="10" wicket:id="message"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input type="submit" wicket:id="sendMessage" value="Gönder"></input>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+            <span wicket:id="fpanel"></span>
+        </form>
+        
+        
 
     </body>
 </html>

@@ -46,7 +46,7 @@ public final class MessagePage extends BasePage {
             Statement statement = conn.getConn().createStatement();
             
 //            int ID=((WSession)getSession()).getKullanici().getId();
-            
+            //BURA DUZELECEK
             int Id = 1;
             String querry="select name, surName, icerik, baslik, Message.id, "
                     + "Message.kimden, Message.okundu_mu from Message, Person "

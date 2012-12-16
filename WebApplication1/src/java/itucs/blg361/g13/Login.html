@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:wicket="http://wicket.apache.org">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>Login</title>
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+    </head>
+    <body>
+            <div wicket:id="dateNavigation"></div>
+             <div wicket:id="mainNavigation"></div>
+             
+          
+         <form wicket:id = "loginForm">
+        <table>
+            <tr>
+              <td align = "right">Username:</td>
+              <td>
+                <input wicket:id = "username" type = "text"  size = "30"/>
+              </td>
+            </tr>
+            <tr>
+              <td align = "right">Password:</td>
+              <td>
+                <input wicket:id = "password" type = "password"  size="30"/>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>
+                <input type = "submit" value = "Sign In"/>
+              </td>
+            </tr>
+        </table>    
+    </form>
+             
+    </body>
+</html>
