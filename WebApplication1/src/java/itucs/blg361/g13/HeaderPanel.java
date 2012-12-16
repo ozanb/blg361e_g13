@@ -29,6 +29,7 @@ import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.markup.html.panel.Panel;
 
 public final class HeaderPanel extends Panel {
+public static int x=0;
 
     public HeaderPanel(String id) {
         super(id);
