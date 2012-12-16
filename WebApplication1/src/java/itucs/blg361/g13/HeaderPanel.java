@@ -192,7 +192,7 @@ public final class HeaderPanel extends Panel {
        @Override
        public void onClick(){
            Product product = new Product();
-//           this.setResponsePage(new AddProduct(product));
+           this.setResponsePage(new AddProduct(product));
        }
    };
         this.add(addProduct);

@@ -4,7 +4,7 @@
  */
 package itucs.blg361.g13;
 
-import itucs.blg361.pojo.Product;
+import itucs.blg361.entityBean.Product;
 import org.apache.wicket.markup.html.form.Form;
 import org.apache.wicket.markup.html.form.TextField;
 import org.apache.wicket.model.CompoundPropertyModel;

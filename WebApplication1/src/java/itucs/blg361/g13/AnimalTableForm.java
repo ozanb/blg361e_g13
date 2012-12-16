@@ -42,7 +42,7 @@ item.add(new Label("kind",animal.getKind()));
 item.add(new Label("number",animal.getNumber().toString()));
 item.add(new Label("age",animal.getAge().toString()));
 item.add(new Label("expense",animal.getExpense().toString()));
-item.add(new Label("productperday",animal.getProductperday().toString()));
+item.add(new Label("productperday",animal.getProduct().toString()));
 
 
 

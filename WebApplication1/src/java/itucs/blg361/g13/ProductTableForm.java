@@ -8,7 +8,7 @@ package itucs.blg361.g13;
  *
  * @author Razi
  */
-import itucs.blg361.pojo.Product;
+import itucs.blg361.entityBean.Product;
 import java.util.LinkedList;
 import java.util.List;
 import org.apache.wicket.markup.html.basic.Label;

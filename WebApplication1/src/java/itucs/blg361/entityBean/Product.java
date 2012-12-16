@@ -10,12 +10,11 @@ package itucs.blg361.entityBean;
  */
 public class Product {
     
-    private int id;
-    private String productKind;
-    private int nOfProduct;
-    private int weight;
-    private int price;
-    private int productPerDay;
+    private Integer id = 0;
+    private String kind = "";
+    private Double weight = 0.0;
+    private Double price = 0.0;
+    private Integer productPerDay = 0;
     
     /**
      *
@@ -24,12 +23,11 @@ public class Product {
     
     }
     
-    public Product(int id, String productKind, int nOfProduct, int weight,
-            int price, int productPerDay){
+    public Product(Integer id, String kind, Double weight,
+            Double price, Integer productPerDay){
     
         this.id = id;
-        this.productKind = productKind;
-        this.nOfProduct = nOfProduct;
+        this.kind = kind;
         this.weight = weight;
         this.price = price;
         this.productPerDay = productPerDay;
@@ -39,84 +37,72 @@ public class Product {
     /**
      * @return the id
      */
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
     /**
      * @param id the id to set
      */
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
     /**
      * @return the productKind
      */
-    public String getProductKind() {
-        return productKind;
+    public String getKind() {
+        return kind;
     }
 
     /**
      * @param productKind the productKind to set
      */
-    public void setProductKind(String productKind) {
-        this.productKind = productKind;
+    public void setKind(String kind) {
+        this.kind = kind;
     }
 
-    /**
-     * @return the nOfProduct
-     */
-    public int getnOfProduct() {
-        return nOfProduct;
-    }
 
-    /**
-     * @param nOfProduct the nOfProduct to set
-     */
-    public void setnOfProduct(int nOfProduct) {
-        this.nOfProduct = nOfProduct;
-    }
 
     /**
      * @return the weight
      */
-    public int getWeight() {
+    public Double getWeight() {
         return weight;
     }
 
     /**
      * @param weight the weight to set
      */
-    public void setWeight(int weight) {
+    public void setWeight(Double weight) {
         this.weight = weight;
     }
 
     /**
      * @return the price
      */
-    public int getPrice() {
+    public Double getPrice() {
         return price;
     }
 
     /**
      * @param price the price to set
      */
-    public void setPrice(int price) {
+    public void setPrice(Double price) {
         this.price = price;
     }
 
     /**
      * @return the productPerDay
      */
-    public int getProductPerDay() {
+    public Integer getProductPerDay() {
         return productPerDay;
     }
 
     /**
      * @param productPerDay the productPerDay to set
      */
-    public void setProductPerDay(int productPerDay) {
+    public void setProductPerDay(Integer productPerDay) {
         this.productPerDay = productPerDay;
     }
     

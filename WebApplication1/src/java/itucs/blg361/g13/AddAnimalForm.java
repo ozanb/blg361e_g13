@@ -21,7 +21,6 @@ public class AddAnimalForm extends Form{
         
         CompoundPropertyModel model = new CompoundPropertyModel(aAnimal);
         this.setModel(model);
-        this.add(new TextField("id"));
         this.add(new TextField("kind"));
         this.add(new TextField("number"));
         this.add(new TextField("age"));

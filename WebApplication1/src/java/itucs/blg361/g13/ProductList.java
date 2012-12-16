@@ -3,7 +3,7 @@
  * and open the tagentlate in the editor.
  */
 package itucs.blg361.g13;
-import itucs.blg361.pojo.Product;
+import itucs.blg361.entityBean.Product;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
