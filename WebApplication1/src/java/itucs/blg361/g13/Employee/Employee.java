@@ -9,6 +9,7 @@ package itucs.blg361.g13.Employee;
  * @author Razi
  */
 public class Employee {
+    private Integer id=0;
     private String name="";
     private String surname="";
     private String birthdate="";
@@ -24,7 +25,8 @@ public class Employee {
         
     }
     
-     public Employee(String name_in,String surname_in,String birthdate_in,String hiredate_in, String depart_in,String edu_in,Integer salary_in,String phonenumber_in,String address_in){
+     public Employee(Integer id_in,String name_in,String surname_in,String birthdate_in,String hiredate_in, String depart_in,String edu_in,Integer salary_in,String phonenumber_in,String address_in){
+        id=id_in; 
         name = name_in;
         surname = surname_in;
         birthdate=birthdate_in;
@@ -35,6 +37,9 @@ public class Employee {
         phonenumber=phonenumber_in;
         address=address_in;
         
+    }
+     public void setId(Integer id_in){
+        id=id_in;
     }
      public void setName(String name_in){
         name = name_in;
@@ -80,6 +85,11 @@ public class Employee {
      
      
      
+     
+     
+       public Integer getId(){
+        return id;
+    }
      
      public String getName(){
         return name;
