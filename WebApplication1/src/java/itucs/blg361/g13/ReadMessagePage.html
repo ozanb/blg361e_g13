@@ -9,6 +9,51 @@
     </wicket:link>
     </wicket:head>
     <body>
+        
+        <p><a href="#" wicket:id="home">Geri dönmek içi tıklayınız</a></p>
+        
         <div wicket:id="mainNavigation"></div>
+        <div wicket:id="dateNavigation"></div>
+        
+                <form action="#" wicket:id="form">
+            <fieldset>
+                <legend>Mesaj Detayları</legend>
+                <table>
+                    <tr>
+                        <td><b>Kimden</b></td>
+                        <td>
+                            <span wicket:id="from"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>Başlık</b></td>
+                        <td>
+                            <span wicket:id="subject"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>Tarih</b></td>
+                        <td>
+                            <span wicket:id="date"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>Mesaj</b></td>
+                        <td>
+                            <span wicket:id="message"></span>
+                        </td> 
+                    </tr>
+                    <tr>
+                        <td> </td>
+                        <td>
+                            <input type="submit" wicket:id="Reply" value="Yanıtla"></input>
+                            <input type="submit" wicket:id="sil" value="sil"></input>
+                        </td>                      
+                    </tr>                  
+                </table>             
+            </fieldset>            
+            </form>
+        
+        
     </body>
 </html>

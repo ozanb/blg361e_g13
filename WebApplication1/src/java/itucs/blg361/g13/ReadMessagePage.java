@@ -5,10 +5,12 @@
 package itucs.blg361.g13;
 
 import itucs.blg361.entityBean.Message;
+import itucs.blg361.entityBean.MessageCollection;
 import itucs.blg361.entityBean.Person;
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.form.Button;
 import org.apache.wicket.markup.html.form.Form;
+import org.apache.wicket.markup.html.link.Link;
 
 /**
  *
@@ -16,12 +18,21 @@ import org.apache.wicket.markup.html.form.Form;
  */
 public final class ReadMessagePage extends BasePage {
    private Form form;
+   private MessageCollection col;
    public ReadMessagePage() {
       super();
    }
    
    public ReadMessagePage(final Message message, final Person sender) {
       
+        Link homeLink = new Link("home"){
+
+            @Override
+            public void onClick() {
+                this.setResponsePage(HomePage.class);
+            }  
+        };
+        this.add(homeLink);
       
          Connect conn = new Connect();
 
@@ -38,6 +49,20 @@ public final class ReadMessagePage extends BasePage {
                     this.setResponsePage(new ReplyMessagePage(message, sender));
                 }
             });
+         
+         form.add(new Button("sil") {
+                @Override
+                public void onSubmit() {
+                   try {
+                      col = new MessageCollection();
+                      int x =3;
+                      col.deleteMessage(message.getId()); 
+                      } catch (Exception e) {
+                      }
+                      this.setResponsePage(new MessagePage());
+                }
+        });
+         
             this.add(form);
             
    }
