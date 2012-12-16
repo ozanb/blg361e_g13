@@ -6,7 +6,14 @@
  
 package itucs.blg361.g13;           
 
-import itucs.blg361.entityBean.Raw;
+import itucs.blg361.g13.Transportion.TransportationList;
+import Raw.RawList;
+import itucs.blg361.g13.Product.ProductList;
+import itucs.blg361.g13.Machine.MachineList;
+import itucs.blg361.g13.Employee.EmpList;
+import itucs.blg361.g13.Animal.AnimalList;
+import itucs.blg361.g13.Agent.AgentList;
+import itucs.blg361.g13.Raw.Raw;
 import org.apache.wicket.protocol.http.WebApplication;
 /** 
  *

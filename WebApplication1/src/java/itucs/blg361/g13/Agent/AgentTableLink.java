@@ -2,8 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package Machine;
-import itucs.blg361.g13.Machine.MachineTable;
+package itucs.blg361.g13.Agent;
 import org.apache.wicket.markup.html.link.Link;
 
 
@@ -11,20 +10,16 @@ import org.apache.wicket.markup.html.link.Link;
  *
  * @author Razi
  */
-public class MachineTableLink extends Link{
+public class AgentTableLink extends Link{
     
     
-      public MachineTableLink(String id){
+      public AgentTableLink(String id){
     super (id);
 }
       @Override
 public void onClick(){
     
-MachineTable target=new MachineTable();
+AgentTable target=new AgentTable();
 this.setResponsePage(target);
-}
-      
-      
-    
-    
+} 
 }

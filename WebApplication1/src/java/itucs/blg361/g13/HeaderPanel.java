@@ -4,13 +4,27 @@
  */
 package itucs.blg361.g13;
 
-import itucs.blg361.entityBean.Agent;
-import itucs.blg361.entityBean.Animal;
-import itucs.blg361.entityBean.Employee;
-import itucs.blg361.entityBean.Machine;
-import itucs.blg361.entityBean.Product;
-import itucs.blg361.entityBean.Raw;
-import itucs.blg361.entityBean.Transportation;
+import itucs.blg361.g13.Transportion.TransportationTable;
+import itucs.blg361.g13.Transportion.AddTransportation;
+import itucs.blg361.g13.Raw.RawTable;
+import itucs.blg361.g13.Raw.AddRaw;
+import itucs.blg361.g13.Product.ProductTable;
+import itucs.blg361.g13.Product.AddProduct;
+import itucs.blg361.g13.Machine.MachineTable;
+import itucs.blg361.g13.Machine.AddMachine;
+import itucs.blg361.g13.Employee.EmployeeTable;
+import itucs.blg361.g13.Employee.AddEmployee;
+import itucs.blg361.g13.Animal.AddAnimal;
+import itucs.blg361.g13.Animal.AnimalTable;
+import itucs.blg361.g13.Agent.AgentTable;
+import itucs.blg361.g13.Agent.AddAgent;
+import itucs.blg361.g13.Agent.Agent;
+import itucs.blg361.g13.Animal.Animal;
+import itucs.blg361.g13.Employee.Employee;
+import itucs.blg361.g13.Machine.Machine;
+import itucs.blg361.g13.Product.Product;
+import itucs.blg361.g13.Raw.Raw;
+import itucs.blg361.g13.Transportion.Transportation;
 import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.markup.html.panel.Panel;
 

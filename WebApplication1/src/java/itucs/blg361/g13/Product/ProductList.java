@@ -1,15 +1,9 @@
 /*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * To change this tagentlate, choose Tools | Tagentlates
+ * and open the tagentlate in the editor.
  */
-package Raw;
-
-/**
- *
- * @author Nadir
- */
-
-import itucs.blg361.g13.Raw.Raw;
+package itucs.blg361.g13.Product;
+import itucs.blg361.g13.Product.Product;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -18,11 +12,14 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.LinkedList;
 import java.util.List;
-
-public class RawList {
+/**
+ *
+ * @author Razi
+ */
+public class ProductList {
     private Connection conn = null;
-  
-    public RawList(){
+    
+    public ProductList(){
         try{
             Class.forName("com.mysql.jdbc.Driver");
         }catch(ClassNotFoundException ex){
@@ -34,21 +31,22 @@ public class RawList {
         }catch(SQLException ex) {
             throw new UnsupportedOperationException(ex.getMessage());
         }
+        
     }
     
-    public List<Raw> getList(){
-        List<Raw> list = new LinkedList<Raw>();
+    public List<Product> getList(){
+        List<Product> list = new LinkedList<Product>();
         try{
             Statement stmt = this.conn.createStatement();
-            ResultSet rs = stmt.executeQuery("select * from raw");
+            ResultSet rs = stmt.executeQuery("select * from product");
             while(rs.next()){
                 Integer id = rs.getInt("id");
-                String name = rs.getString("kind");
+                String name = rs.getString("productKind");
                 Double weight = rs.getDouble("weight");
                 Double price = rs.getDouble("price");
-                Integer want = rs.getInt("dailyWant");
-                Raw raw = new Raw(id,name,weight,price,want);
-                list.add(raw);
+                Integer want = rs.getInt("productPerDay");
+                Product prod = new Product(id,name,weight,price,want);
+                list.add(prod);
             }
         }catch(SQLException ex) {
             throw new UnsupportedOperationException(ex.getMessage());
@@ -56,14 +54,14 @@ public class RawList {
         return list;
     }
     
-    public void addRaw(Raw raw){
+    public void addProduct(Product prod){
         try{
-            PreparedStatement stmt = conn.prepareStatement("INSERT INTO RAW(KIND, WEIGHT, PRICE, DAILYWANT)"
+            PreparedStatement stmt = conn.prepareStatement("INSERT INTO PRODUCT(PRODUCTKIND, WEIGHT, PRICE, PRODUCTPERDAY)"
                     + "VALUES(?,?,?,?)");
-            stmt.setString(1, raw.getName());
-            stmt.setDouble(2, raw.getWeight());
-            stmt.setDouble(3, raw.getPrice());
-            stmt.setInt(4, raw.getWant());
+            stmt.setString(1, prod.getKind());
+            stmt.setDouble(2, prod.getWeight());
+            stmt.setDouble(3, prod.getPrice());
+            stmt.setInt(4, prod.getProductPerDay());
             stmt.executeUpdate();
             
         }catch(SQLException ex) {
@@ -71,17 +69,14 @@ public class RawList {
         }
     }
     
-    public void deleteRaw(Raw raw){
-        
+    public void deleteProduct(Product prod){
         try{
-            PreparedStatement stmt = conn.prepareStatement("DELETE FROM raw WHERE (ID=?)");
-            stmt.setInt(1, raw.getID());
+            PreparedStatement stmt = conn.prepareStatement("DELETE FROM product WHERE (ID=?)");
+            stmt.setInt(1, prod.getId());
             stmt.executeUpdate();
         }catch (SQLException ex){
             throw new UnsupportedOperationException(ex.getMessage());
         }
     }
-    
-    
     
 }
