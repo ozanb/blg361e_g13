@@ -3,9 +3,6 @@
  * and open the ttransportationlate in the editor.
  */
 package itucs.blg361.g13.Transportation;
-import java.util.LinkedList;
-import java.util.List;
-import itucs.blg361.g13.Transportation.Transportation;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -80,6 +77,23 @@ public class TransportationList {
             stmt.setInt(1, transportation.getId());
             stmt.executeUpdate();
         }catch (SQLException ex){
+            throw new UnsupportedOperationException(ex.getMessage());
+        }
+    }
+    
+    public void update(Transportation transportation){
+        try{
+            PreparedStatement stmt = conn.prepareStatement("UPDATE Transportation SET AGENTTOSEND=?, ADDRESS=?, NOFORDER=?,"
+                    + "EXPENSE=?, PRODUCT=? WHERE ID=?");
+            stmt.setString(1, transportation.getAgenttosend());
+            stmt.setString(2, transportation.getAddress());
+            stmt.setInt(3, transportation.getNoforder());
+            stmt.setInt(4, transportation.getExpense());
+            stmt.setString(5, transportation.getProduct());
+            stmt.setInt(6, transportation.getId());
+            stmt.executeUpdate();
+            
+        }catch(SQLException ex) {
             throw new UnsupportedOperationException(ex.getMessage());
         }
     }

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:wicket="http://wicket.apache.org">
+    <wicket:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>Transportation Edit</title>
+        <wicket:link>
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+        </wicket:link>
+    </wicket:head>
+    <body>
+        <div wicket:id="mainNavigation"></div>
+        <h2>Transportatin Edit Page</h2>
+        
+        <form action="#" wicket:id="trans_edit">
+            <table>
+                <tr>
+                    <th>Agenttosend:</th>
+                    <td><input wicket:id="agenttosend" type="text"/></td>
+                </tr>
+                <tr>
+                    <th>Address:</th>
+                    <td><input wicket:id="address" type="text"/></td>
+                </tr>
+              
+                 <tr>
+                    <th>Number of Order:</th>
+                    <td><input wicket:id="noforder" type="text"/></td>
+                </tr>
+                 <tr>
+                    <th>Expense:</th>
+                    <td><input wicket:id="expense" type="text"/></td>
+                </tr>
+                 <tr>
+                    <th>Product:</th>
+                    <td><input wicket:id="product" type="text"/></td>
+                </tr>
+            </table>
+            <input value="Save" name="Save" type="submit"/>
+        </form>
+       
+        <div wicket:id="dateNavigation"></div>
+    </body>
+</html>

@@ -12,8 +12,8 @@ import org.apache.wicket.model.CompoundPropertyModel;
  * @author Razi
  */
 public class AddTransportationForm  extends Form{
-    
-     public AddTransportationForm(String id, Transportation aTransportation){
+     private boolean flag;
+     public AddTransportationForm(String id, Transportation aTransportation, boolean flag){
          super(id);
          
         CompoundPropertyModel model = new CompoundPropertyModel(aTransportation);
@@ -24,7 +24,7 @@ public class AddTransportationForm  extends Form{
         this.add(new TextField("noforder"));
         this.add(new TextField("expense"));
         this.add(new TextField("product"));
-
+        this.flag=flag;
         
      }
     @Override
@@ -32,7 +32,11 @@ public class AddTransportationForm  extends Form{
         Transportation transportation = (Transportation) this.getModelObject();
         Application app = (Application) this.getApplication();
         TransportationList list = app.getTransportationList();
-        list.addTransportation(transportation);
+        if (flag) {
+            list.addTransportation(transportation);
+        } else {
+            list.update(transportation);
+        }
         this.setResponsePage(new TransportationInfo(transportation));
     
     

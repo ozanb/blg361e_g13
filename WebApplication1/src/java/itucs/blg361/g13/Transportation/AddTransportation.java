@@ -10,7 +10,7 @@ import itucs.blg361.g13.BasePage;
 public final class AddTransportation extends BasePage {
 
      public AddTransportation(Transportation aTransportation) {
-        this.add(new AddTransportationForm("add_transportation",aTransportation));
+        this.add(new AddTransportationForm("add_transportation",aTransportation,true));
 
     }
     

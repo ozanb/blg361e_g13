@@ -12,6 +12,7 @@ import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.form.Check;
 import org.apache.wicket.markup.html.form.CheckGroup;
 import org.apache.wicket.markup.html.form.Form;
+import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.markup.html.list.ListItem;
 import org.apache.wicket.markup.html.list.PropertyListView;
 
@@ -35,13 +36,21 @@ public class TransportationTableForm extends Form {
         
             @Override
             protected void populateItem(ListItem item){
-                Transportation transportation = (Transportation) item.getModelObject();
+                final Transportation transportation = (Transportation) item.getModelObject();
+                item.add(new Link("editlink")
+                {
+                    @Override
+                    public void onClick()
+                    {
+                        setResponsePage(new TransportationEdit(transportation));
+                    }
+                });
                 item.add(new Check("selected", item.getModel()));
-                  item.add(new Label("agenttosend",transportation.getAgenttosend()));
-                 item.add(new Label("address",transportation.getAddress()));
-                  item.add(new Label("noforder",transportation.getNoforder().toString()));
-                 item.add(new Label("expense",transportation.getExpense().toString()));
-                 item.add(new Label("product",transportation.getProduct()));
+                item.add(new Label("agenttosend",transportation.getAgenttosend()));
+                item.add(new Label("address",transportation.getAddress()));
+                item.add(new Label("noforder",transportation.getNoforder().toString()));
+                item.add(new Label("expense",transportation.getExpense().toString()));
+                item.add(new Label("product",transportation.getProduct()));
             }
         };
         transportationCheck.add(listview);

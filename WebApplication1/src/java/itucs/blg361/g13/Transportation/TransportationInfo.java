@@ -13,13 +13,15 @@ import org.apache.wicket.markup.html.basic.Label;
  */
 public final class TransportationInfo extends BasePage {
 
-     public TransportationInfo(Transportation transportation) {
-        
+     public TransportationInfo(Transportation transportation) {        
+         this.add(new Label("name",transportation.getAgenttosend()));
          this.add(new Label("agenttosend",transportation.getAgenttosend()));
+         this.add(new Label("address",transportation.getAddress()));
+         this.add(new Label("noforder",transportation.getNoforder().toString()));
+         this.add(new Label("expense",transportation.getExpense().toString()));
+         this.add(new Label("product",transportation.getProduct()));
         
     }
-    
-    
-    }
+}
     
     
