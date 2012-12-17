@@ -100,4 +100,19 @@ public class AgentList {
         }
     }
     
+    public List<String> getNames(){
+        List<String> list = new LinkedList<String>();
+        try{
+            Statement stmt = this.conn.createStatement();
+            ResultSet rs = stmt.executeQuery("select name from agent");
+            while(rs.next()){
+                String name = rs.getString("name");
+                list.add(name);
+            }
+        }catch(SQLException ex) {
+            throw new UnsupportedOperationException(ex.getMessage());
+        }
+        return list;
+    }
+    
 }
