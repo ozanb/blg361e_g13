@@ -4,12 +4,15 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <title>Login</title>
-        <link rel="stylesheet" type="text/css" href="style.css"/>
+        <link rel="stylesheet" type="text/css" href="basic-minimal.css"/>
     </head>
-    <body>
-            <div wicket:id="dateNavigation"></div>
-             <div wicket:id="mainNavigation"></div>
-             
+     <body class="light">
+        <div id="wrap">
+            <div id="header">
+                <div id="sidebar" wicket:id="mainNavigation"></div>
+                <p class="slogan">space for website slogan</p>
+            </div>
+              <div wicket:id="dateNavigation"></div>
           
          <form wicket:id = "loginForm">
         <table>
@@ -33,6 +36,6 @@
             </tr>
         </table>    
     </form>
-             
+        </div>          
     </body>
 </html>
