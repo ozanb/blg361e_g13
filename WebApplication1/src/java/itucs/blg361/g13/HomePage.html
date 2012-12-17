@@ -7,14 +7,18 @@
         <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>        
         <title>MilkyWeb Uygulamasi</title> 
         <wicket:link>
-        <link rel="stylesheet" type="text/css" href="style.css"/>
+        <link rel="stylesheet" type="text/css" href="basic-minimal.css"/>
     </wicket:link>
     </wicket:head> 
-    <body> 
-        <div wicket:id="mainNavigation"></div>
+    <body class="light"> 
+        
+        <div id="wrap">
+	<div id="header">
+        
+        <div id="sidebar" wicket:id="mainNavigation"></div>
         
         <h1>DBMS Gida</h1>
-          
+        <p class="slogan">space for website slogan</p>
         <div wicket:id="dateNavigation"></div>
         <ul>
          <li>        
@@ -29,7 +33,7 @@
         </wicket:link>
         </li>
        </ul>
-
+        </div></div>
         
     </body> 
 </html>

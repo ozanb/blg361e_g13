@@ -5,11 +5,15 @@
         <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>        
         <title>The Milk Factory - Raw List</title> 
         <wicket:link>
-        <link rel="stylesheet" type="text/css" href="style.css"/>
+        <link rel="stylesheet" type="text/css" href="basic-minimal.css"/>
     </wicket:link>
     </wicket:head>
-    <body>
-         <div wicket:id="mainNavigation"></div>
+   <body class="light">
+        <div id="wrap">
+            <div id="header">
+                <div id="sidebar" wicket:id="mainNavigation"></div>
+                <p class="slogan">space for website slogan</p>
+            </div>
         <h2>Raw Table</h2>
         <form action="#" wicket:id="raw_list_form">
             <div wicket:id="selected_raw">
@@ -36,5 +40,6 @@
         </form>
 
         <div wicket:id="dateNavigation"></div>
+        </div>
     </body>
 </html>

@@ -5,11 +5,15 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <title>Production Edit</title>
         <wicket:link>
-        <link rel="stylesheet" type="text/css" href="style.css"/>
+        <link rel="stylesheet" type="text/css" href="basic-minimal.css"/>
         </wicket:link>
     </wicket:head>
-    <body>
-        <div wicket:id="mainNavigation"></div>
+     <body class="light">
+        <div id="wrap">
+            <div id="header">
+                <div id="sidebar" wicket:id="mainNavigation"></div>
+                <p class="slogan">space for website slogan</p>
+            </div>
         <h2>Product Edit Page</h2>
         
         <form action="#" wicket:id="prod_edit">
@@ -35,5 +39,6 @@
         </form>
        
         <div wicket:id="dateNavigation"></div>
+        </div>
     </body>
 </html>
