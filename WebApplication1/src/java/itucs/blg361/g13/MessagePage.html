@@ -3,7 +3,7 @@
 <html xmlns:wicket="http://wicket.apache.org">
     <wicket:head>
         <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>        
-        <title>MilkyWeb Uygulamasi</title> 
+        <title>Message</title> 
         <wicket:link>
         <link rel="stylesheet" type="text/css" href="basic-minimal.css"/>
     </wicket:link>
@@ -12,27 +12,27 @@
         <div id="wrap">
             <div id="header">
                 <div id="sidebar" wicket:id="mainNavigation"></div>
-                <p class="slogan">space for website slogan</p>
+                <p class="slogan">to health..</p>
             </div>
         
         <div wicket:id="dateNavigation"></div>
         
         <script type="text/javascript">
             function getConfirmation(){
-                return confirm("Emin misiniz?");
+                return confirm("Are you sure ?");
             }
         </script>
         
         <form wicket:id="msgForm">
             
-            <h2> <a href="#" wicket:id="sendMessage">Yeni Mesaj Oluştur</a> </h2>
+            <h2> <a href="#" wicket:id="sendMessage">Click to write a message</a> </h2>
             
             <br></br>
             <table border="1">
-                <tr><th>Oku</th><th>Sil</th><th>Okundu mu ?</th><th>Kimden</th><th>Başlık</th><th>Tarih</th></tr>
+                <tr><th>Read</th><th>Delete</th><th>Read - Unread</th><th>From</th><th>Subject</th><th>Date</th></tr>
           <tr wicket:id="listMessages">
-          <td><a href="#" wicket:id="read">Oku</a></td>
-          <td><a href="#" wicket:id="delete" onclick="return getConfirmation()">Sil</a></td>
+          <td><a href="#" wicket:id="read">Read</a></td>
+          <td><a href="#" wicket:id="delete" onclick="return getConfirmation()">Delete</a></td>
           <td wicket:id="status"></td>
           <td wicket:id="from"></td>
           <td wicket:id="subject"></td>

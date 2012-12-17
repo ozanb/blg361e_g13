@@ -43,7 +43,7 @@ public final class ReadMessagePage extends BasePage {
          form.add(new Label("subject", message.getBaslik()));
          form.add(new Label("date", message.getTarih()));
          form.add(new Label("message", message.getIcerik()));
-         form.add(new Button("Reply") {
+         form.add(new Button("yanitla") {
                 @Override
                 public void onSubmit() {
                     this.setResponsePage(new ReplyMessagePage(message, sender));

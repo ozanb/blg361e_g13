@@ -38,9 +38,9 @@ import org.apache.wicket.request.resource.ResourceReference;
  */
 public final class HRInsert extends BasePage {
 
-        private static final List<String> categories = Arrays.asList("Kadın", "Erkek");
-        private String selected="Erkek";
-        private final String gen ="Erkek";
+        private static final List<String> categories = Arrays.asList("Women", "Men");
+        private String selected="Men";
+        private final String gen ="Men";
         
         private static final ResourceReference RESOURCE_REF = new PackageResourceReference(HRInsert.class,
         "basvur.jpg");
