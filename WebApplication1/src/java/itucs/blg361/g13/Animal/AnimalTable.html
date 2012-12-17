@@ -17,7 +17,9 @@
         <h2> Animal List</h2>
         <form action="#" wicket:id="animal_list_form">
             <div wicket:id="selected_animal">
+                 <div class="datagrid">
                 <table border="5">
+                     <thead>
                     <tr>
                         <th>Kind Of the Animal</th>
                         <th>Number</th>
@@ -27,6 +29,7 @@
                         <th>Delete</th>
                         <th>Edit</th>
                     </tr>
+                     </thead>
                     <tr wicket:id="animal_list">
                         <td><span wicket:id="kind"></span></td>
                         <td><span wicket:id="number"></span></td>
@@ -37,8 +40,9 @@
                         <td><a href="#" wicket:id="editlink">Edit</a></td>
                     </tr>
                 </table>
+                 </div>
             </div>
-            <input type="submit" value="Delete" name="delete"/>
+            <input class="submit" type="submit" value="Delete" name="delete"/>
         </form>
         
         <div wicket:id="dateNavigation"></div>

@@ -17,7 +17,9 @@
         <h2>Raw Table</h2>
         <form action="#" wicket:id="raw_list_form">
             <div wicket:id="selected_raw">
+                 <div class="datagrid">
                 <table border="5">
+                    <thead>
                     <tr>
                         <th>Kind</th>
                         <th>Price</th>
@@ -26,6 +28,7 @@
                         <th>Delete</th>
                         <th>Edit</th>
                     </tr>
+                </thead>
                     <tr wicket:id="raw_list">
                         <td><span wicket:id="name"></span></td>
                         <td><span wicket:id="weight"></span></td>
@@ -35,8 +38,9 @@
                         <td><a href="#" wicket:id="editlink">Edit</a></td>
                     </tr>
                 </table>
+                 </div>
             </div>
-            <input type="submit" value="Delete" name="delete"/>
+            <input class="submit" type="submit" value="Delete" name="delete"/>
         </form>
 
         <div wicket:id="dateNavigation"></div>

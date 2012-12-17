@@ -18,7 +18,9 @@
         <h2> Employee List</h2>
         <form action="#" wicket:id="emp_list_form">
             <div wicket:id="selected_emp">
+                <div class="datagrid">
                 <table border="5">
+                     <thead>
                     <tr>
                         <th>Name</th>
                         <th>Surname</th>
@@ -32,6 +34,7 @@
                         <th>Delete</th>
                         <th>Edit</th>
                     </tr>
+                     </thead>
                     <tr wicket:id="emp_list">
                         <td><span wicket:id="name"></span></td>
                         <td><span wicket:id="surname"></span></td>
@@ -47,7 +50,8 @@
                     </tr>
                 </table>
             </div>
-            <input type="submit" value="Delete" name="delete"/>
+            </div>  
+            <input class="submit" type="submit" value="Delete" name="delete"/>
         </form>
         
         <div wicket:id="dateNavigation"></div>

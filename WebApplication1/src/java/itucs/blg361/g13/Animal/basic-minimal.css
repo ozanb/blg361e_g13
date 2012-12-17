@@ -12,7 +12,7 @@ For more information, see http://andreasviklund.com/templates/basic-minimal/
 }
 
 body {background:#eee url(background.jpg) top center no-repeat; color:#555; font:84% Tahoma,Verdana,sans-serif; line-height:1.6em;}
-p {margin:0 0 20px 0;}
+p {margin:0 0 10px 0;}
 p.slogan {font-size:1.4em;padding:15px 0 15px 40px;}
 a {color:#467aa7; text-decoration:none;}
 a:hover {color:#333; text-decoration:none;}
@@ -25,7 +25,7 @@ img.alignright {float:right; margin:5px 0 5px 25px;}
 img.aligncenter {display:block; margin:10px auto;}
 hr.clear {visibility:hidden;clear:both;}
 
-#wrap {width:980px; margin:20px auto; padding:0;}
+#wrap {width:96%; margin:20px auto; padding:0;}
 #header {width:680px; margin:0 0 30px 20px; height:120px; padding-left:200px; background:transparent url(logo.jpg) top left no-repeat;}
 #content {width:460px; margin-left:220px;}
 #content .meta {padding:10px; text-align:right; text-transform:uppercase; font-size:0.8em; line-height:1.4em;}
@@ -42,3 +42,28 @@ hr.clear {visibility:hidden;clear:both;}
 #footer p {margin:0; padding:0;}
 #footer a {color:#777;}
 
+.datagrid table { border-collapse: collapse; text-align: left; width: 100%; } .datagrid {font: normal 10px/150% Arial, Helvetica, sans-serif; background: #fff; overflow: hidden; border: 1px solid #006699; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; }.datagrid table td, .datagrid table th { padding: 3px 10px; }.datagrid table thead th {background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #006699), color-stop(1, #00557F) );background:-moz-linear-gradient( center top, #006699 5%, #00557F 100% );filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#006699', endColorstr='#00557F');background-color:#006699; color:#ffffff; font-size: 15px; font-weight: bold; border-left: 1px solid #0070A8; } .datagrid table thead th:first-child { border: none; }.datagrid table tbody td { color: #00496B; border-left: 1px solid #E1EEF4;font-size: 12px;font-weight: normal; }.datagrid table tbody .alt td { background: #E1EEF4; color: #00496B; }.datagrid table tbody td:first-child { border-left: none; }.datagrid table tbody tr:last-child td { border-bottom: none; }.datagrid table tfoot td div { border-top: 1px solid #006699;background: #E1EEF4;} .datagrid table tfoot td { padding: 0; font-size: 12px } .datagrid table tfoot td div{ padding: 2px; }.datagrid table tfoot td ul { margin: 0; padding:0; list-style: none; text-align: right; }.datagrid table tfoot  li { display: inline; }.datagrid table tfoot li a { text-decoration: none; display: inline-block;  padding: 2px 8px; margin: 1px;color: #FFFFFF;border: 1px solid #006699;-webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #006699), color-stop(1, #00557F) );background:-moz-linear-gradient( center top, #006699 5%, #00557F 100% );filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#006699', endColorstr='#00557F');background-color:#006699; }.datagrid table tfoot ul.active, .datagrid table tfoot ul a:hover { text-decoration: none;border-color: #006699; color: #FFFFFF; background: none; background-color:#00557F;}
+.submit {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #006699), color-stop(1, #006699) );
+	background:-moz-linear-gradient( center top, #006699 5%, #006699 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#006699', endColorstr='#006699');
+	background-color:#006699;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+}.submit:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #006699), color-stop(1, #006699) );
+	background:-moz-linear-gradient( center top, #006699 5%, #006699 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#006699', endColorstr='#006699');
+	background-color:#006699;
+}.submit:active {
+	position:relative;
+	top:1px;
+}

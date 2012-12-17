@@ -18,7 +18,9 @@
         <h2> Transportation List</h2>
         <form action="#" wicket:id="transportation_list_form">
             <div wicket:id="selected_transportation" >
+                 <div class="datagrid">
                 <table border="5">
+                    <thead>
                     <tr>
                         <th>Agent</th>
                         <th>Address</th>               
@@ -28,6 +30,7 @@
                         <th>Delete</th>
                         <th>Edit</th>
                     </tr>
+                    </thead>
                     <tr wicket:id="transportation_list">
                         <td><span wicket:id="agenttosend"></span></td>
                         <td><span wicket:id="address"></span></td>
@@ -38,8 +41,9 @@
                         <td><a href="#" wicket:id="editlink">Edit</a></td>
                     </tr>
                 </table>
+                 </div>
             </div>
-            <input type="submit" value="Delete" country="delete"/>
+            <input class="submit" type="submit" value="Delete" country="delete"/>
         </form>
         <div wicket:id="dateNavigation"></div>
         

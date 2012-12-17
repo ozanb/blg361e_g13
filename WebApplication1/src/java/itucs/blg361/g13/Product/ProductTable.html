@@ -18,7 +18,9 @@
         <h2> Product List</h2>
         <form action="#" wicket:id="product_list_form">
             <div wicket:id="selected_product">
+                 <div class="datagrid">
                 <table border="5">
+                    <thead>
                     <tr>
                         <th>Kind</th>
                         <th>Weight</th>
@@ -27,6 +29,7 @@
                         <th>Delete</th>
                         <th>Edit</th>
                     </tr>
+                    </thead>
                     <tr wicket:id="product_list">
                         <td><span wicket:id="kind"></span></td>
                         <td><span wicket:id="weight"></span></td>
@@ -36,8 +39,9 @@
                         <td><a href="#" wicket:id="editlink">Edit</a></td>
                     </tr>
                 </table>
+                 </div>
             </div>
-            <input type="submit" value="Delete" name="delete"/>
+            <input class="submit" type="submit" value="Delete" name="delete"/>
         </form>
         <div wicket:id="dateNavigation"></div>
         
