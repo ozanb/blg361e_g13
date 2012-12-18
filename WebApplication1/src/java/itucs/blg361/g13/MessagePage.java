@@ -119,10 +119,10 @@ public final class MessagePage extends BasePage {
                          }
                     });
                     
-                    String status = "Okunmadı";
+                    String status = "Not Read";
                     
                     if(message.getOkundu_mu() !=false) {
-                    status = "Okundu";
+                    status = "Read";
                 }
                     item.add(new Label("status", status));
                     item.add(new Label("from", sender.getName()));

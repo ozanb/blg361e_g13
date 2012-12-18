@@ -34,19 +34,18 @@ public final class SendMessagePage extends BasePage {
     private TextArea<String> messageTextArea;
     private Form mailForm;
     
-    private List<Person> users =null;
+    private List<Person> users;
     
     public SendMessagePage() {
         super();
             try {
            
             Connect conn = new Connect();      
-            PersonCollection kul=new PersonCollection();
+            PersonCollection per =new PersonCollection();
             users =new ArrayList<Person>();
             
             Person p =new Person();
-            p.setName("deneme");
-            users =kul.getAllPerson();
+            users =per.getAllPerson();
             users.add(p);
             
         }catch (Exception ex) {
@@ -97,25 +96,23 @@ public final class SendMessagePage extends BasePage {
                     
                     Connect conn=new Connect();
                     
-                    PersonCollection kul=new PersonCollection();
-                    MessageCollection mb=new MessageCollection(); 
+                    PersonCollection per = new PersonCollection();
+                    MessageCollection mc = new MessageCollection(); 
                     
                     //SESSION YOK O yuzden simdilik ;
-                    Person ben=kul.getPersonById(1);        //1 yanlis                   
-                    Person sen=kul.getPersonById(2);        //2 yanlis
+                    Person ben = per.getPersonById(1);        //1 yanlis                   
+                    Person sen = per.getPersonById(2);        //2 yanlis
                     //SESSION YOK O yuzden simdilik ;
                     Message m =new Message();
-                    
-                    m.setBaslik(subject);
-                    m.setIcerik(message);
-                    m.setOkundu_mu(false);
-                    m.setKimden(ben);
-                    m.setKime(user);
-                    m.setTarih(reportDate);
-                    
-                   // Message m=new Message(10, subject, reportDate,  message, false, ben, user );    //10 yanlis
-              
-                    mb.addMessage(m);
+//                    
+//                    m.setBaslik(subject);
+//                    m.setIcerik(message);
+//                    m.setOkundu_mu(false);
+//                    m.setKimden(ben);
+//                    m.setKime(user);
+//                    m.setTarih(reportDate);
+//    
+                    mc.addMessage(m);
                     
                     
                     info("Mesaj Başarıyla Gönderildi");

@@ -87,12 +87,12 @@ public class HumanSourceCollection {
         return HR;
     }
     
-    public void deleteHR(HumanResource k) {
+    public void deleteHR(HumanResource h) {
         try {
             Connect conn = new Connect();
             PreparedStatement statement = conn.getConn().prepareStatement("delete"
                     + "from hrdepartment where id = ?");
-            statement.setInt(1, k.getId());
+            statement.setInt(1, h.getId());
             statement.executeUpdate();
             conn.closeConn();
         } catch (SQLException ex) {

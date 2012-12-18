@@ -25,11 +25,11 @@ public final class ReadMessagePage extends BasePage {
    
    public ReadMessagePage(final Message message, final Person sender) {
       
-        Link homeLink = new Link("home"){
+        Link homeLink = new Link("messagePage"){
 
             @Override
             public void onClick() {
-                this.setResponsePage(HomePage.class);
+                this.setResponsePage(MessagePage.class);
             }  
         };
         this.add(homeLink);

@@ -14,12 +14,20 @@
                 <div id="sidebar" wicket:id="mainNavigation"></div>
                 <p class="slogan">to health..</p>
             </div>
-         <p><a href="#" wicket:id="home">Click to back</a></p>
+         <p><a href="#" wicket:id="messagePage">Click to back</a></p>
         <div wicket:id="dateNavigation"></div>
         
+        <script type="text/javascript">
+            function getConfirmation(){
+                return confirm("Are you sure ?");
+            }
+        </script>
+        
                 <form action="#" wicket:id="form">
+                    <div class="datagrid"> 
             <fieldset>
-                <legend>Mesaj Detayları</legend>
+                
+                <legend>Message Details</legend>
                 <table>
                     <tr>
                         <td><b>From</b></td>
@@ -49,11 +57,13 @@
                         <td> </td>
                         <td>
                             <input type="submit" wicket:id="yanitla" value="Reply"></input>
-                            <input type="submit" wicket:id="sil" value="Delete"></input>
+                            <input type="submit" wicket:id="sil" value="Delete"onclick="return getConfirmation()"></input>
+
                         </td>                      
                     </tr>                  
                 </table>             
-            </fieldset>            
+            </fieldset>
+                        </div>
             </form>
         
         </div>  

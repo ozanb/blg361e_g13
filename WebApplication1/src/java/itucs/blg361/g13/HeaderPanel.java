@@ -13,6 +13,7 @@ import itucs.blg361.g13.Animal.AnimalTable;
 import itucs.blg361.g13.Employee.AddEmployee;
 import itucs.blg361.g13.Employee.Employee;
 import itucs.blg361.g13.Employee.EmployeeTable;
+import itucs.blg361.g13.HumanResource.HRInsert;
 import itucs.blg361.g13.Machine.AddMachine;
 import itucs.blg361.g13.Machine.Machine;
 import itucs.blg361.g13.Machine.MachineTable;
@@ -211,12 +212,28 @@ public static int x=0;
        }
    };
         this.add(addProduct);
+    
+    Link meSsage = new Link("meSsage"){
+
+            @Override
+            public void onClick() {
+                this.setResponsePage(new MessagePage());
+            }  
+        };
+        this.add(meSsage);
         
         
         
+        Link hr = (Link) new Link("human") {
+            @Override
+            public void onClick() {
+               this.setResponsePage(new HRInsert());
+            }
+        };
         
-        
-        
- 
+    this.add(hr);
+
+
     }
 }
+        
