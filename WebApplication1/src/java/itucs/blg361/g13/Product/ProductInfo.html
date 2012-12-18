@@ -14,14 +14,17 @@
                 <div id="sidebar" wicket:id="mainNavigation"></div>
                 <p class="slogan">For milk</p>
             </div>
-        <h1><span wicket:id="name"></span> is Added.</h1>
+        <h3><span wicket:id="name"></span> is Added.</h3>
+         <div class="datagrid">
         <table border="5">
+            <thead>
                     <tr>
                         <th>Kind</th>
                         <th>Price</th>
                         <th>Price</th>
                         <th>Daily Want</th>
                     </tr>
+            </thead>
                     <tr>
                         <td><span wicket:id="kind"></span></td>
                         <td><span wicket:id="weight"></span></td>
@@ -30,6 +33,7 @@
                     </tr>
         </table>
         <div wicket:id="dateNavigation"></div>
+        </div>
         </div>
     </body>
 </html>
